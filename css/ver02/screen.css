@@ -1,0 +1,21 @@
+@charset "shift_jis";
+
+/***********************************************************
+		screen.css
+************************************************************/
+
+@import "yui_reset.css";
+@import "common.css";
+@import "layout.css";
+@import "global.css";
+@import "module.css";
+
+/* Mac ie5.x Only Styles	*/
+/*\*//*/
+  @import "ie5mac.css";
+/**/
+
+/* Win ie5.x Only Styles	*/
+@media tty {
+ i{content:"\";/*" "*/}} @import 'ie5win.css'; /*";}
+}/* */

@@ -1,0 +1,41 @@
+@charset "shift_jis";
+
+#container {
+	width: 65em;
+	margin: 20px auto 0;
+}
+
+#header {
+	margin-bottom: 20px;
+}
+
+#contents {
+	width: 65em;
+}
+
+#main {
+	float: right;
+	width: 54em;
+	border-left: 1em solid white;
+}
+
+#mainContent {
+	padding: 0 0 0.5em 0.5em;
+}
+
+#sub {
+	float: left;
+	width: 10em;
+	background: #336666;
+}
+
+/*
+---------------------------------*/
+
+.dColLeft {
+	float: left;
+}
+
+.dColRight {
+	float: right;
+}

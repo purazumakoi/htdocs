@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/*
+
+	----------------------------------
+	layout.css
+	----------------------------------
+	
+*/
+
+
+/*********************************************/
+/*
+/* base
+/*
+/*********************************************/
+	
+	/* wrapper */
+	
+	div#dWrapper {
+		margin: 20px 50px;
+	}
+	
+	/* header */
+	
+	div#dHeader {
+	}
+			
+	/* global navi */
+	
+	div#dGlobalNavi {
+	}
+
+	/* main */
+
+	div#dMain {
+		background: url(../../image/bg_main_body.gif) repeat-y left top;
+	}
+	
+	/* contentes area */
+	
+	div#dContentsArea {
+		background: url(../../image/bg_main_head.gif) no-repeat left top;
+		margin-top: 10px;
+		padding: 5px 25px 25px 25px;
+	}
+	
+	/* footer */
+
+	div#dFooter {
+		background: url(../../image/bg_main_foot.gif) no-repeat left top;
+		padding: 30px 0;
+	}

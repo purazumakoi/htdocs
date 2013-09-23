@@ -1,0 +1,19 @@
+@charset "shift_jis";
+
+/*
+
+	----------------------------------
+	screen.css
+	----------------------------------
+	
+*/
+
+@import "common.css";
+@import "layout.css";
+@import "module.css";
+
+/* Mac ie5.x Only Styles	*/
+/*\*//*/
+  @import "ie5mac.css";
+/**/
+

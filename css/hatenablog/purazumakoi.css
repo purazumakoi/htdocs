@@ -1,0 +1,14 @@
+/* CSS Document */
+
+.hatena-module-category .hatena-module-body .hatena-urllist li {
+	margin-bottom: 0;
+	padding: 0;
+	border-bottom: none;
+}
+
+#main-inner .entry-content img {
+	border: 1px solid #ccc;
+}
+
+blockquote {
+    background-color: #DDD;

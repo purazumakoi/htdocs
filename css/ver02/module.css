@@ -1,0 +1,63 @@
+@charset "shift_jis";
+
+/***********************************************************
+		module.css
+************************************************************/
+
+
+
+
+ul#subMenu a {
+	display: block;
+	padding: 10px 5px;
+	background: #ccc none repeat scroll 0%;
+	border-bottom: 1px solid white;
+}
+
+ul#subMenu a:hover {
+	background: #ffc300 none repeat scroll 0%;
+	color: #FFFFFF;
+}
+
+div#header .dColRight {
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+
+}
+		#status {
+			text-align: center;
+		}
+
+div.dWap {
+	margin: 10px;
+	margin-bottom: 1.5em;
+}
+
+/*------------------------------------------------*/
+
+h2 {
+	background-color: #549eff;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+h3 {
+	background-color: #9bd2af;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+div.dWap ul li {
+	font-size: 80%;
+	line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
