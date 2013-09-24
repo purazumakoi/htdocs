@@ -15,9 +15,9 @@ class Twitter_Oauth {
 	
 	protected $connection = null;
 	protected $tokens = array();
-	protected $auth_url           = 'http://api.twitter.com/oauth/authenticate';
-	protected $request_token_url  = 'http://api.twitter.com/oauth/request_token';
-	protected $access_token_url   = 'http://api.twitter.com/oauth/access_token';
+	protected $auth_url           = 'https://api.twitter.com/oauth/authenticate';
+	protected $request_token_url  = 'https://api.twitter.com/oauth/request_token';
+	protected $access_token_url   = 'https://api.twitter.com/oauth/access_token';
 	protected $signature_method   = 'HMAC-SHA1';
 	protected $version            = '1.0';
 	protected $api_url            = 'http://api.twitter.com';
@@ -329,7 +329,19 @@ class Twitter_Oauth {
 	 */
 	public function get_auth_url()
 	{
+
+
+
+
 		$token = $this->get_request_token();
+
+		print_r($token);exit();
+
+		print_r($this->auth_url.'?oauth_token='.$token->oauth_token);
+
+
+
+
 		return $this->auth_url.'?oauth_token='.$token->oauth_token;
 	}
 	
