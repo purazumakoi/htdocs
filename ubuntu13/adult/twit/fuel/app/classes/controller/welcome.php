@@ -37,7 +37,13 @@ class Controller_Welcome extends Controller
 			Twitter::login();                       // Twitter のログイン画面へ遷移
 		}
 
-		return Response::forge(View::forge('welcome/index'));
+		$twitter_user = Twitter::get('account/verify_credentials');
+		$data = array(
+			'screen_name' => $twitter_user->screen_name
+		);
+
+		//return Response::forge(View::forge('welcome/index'));
+		return Response::forge(View::forge('welcome/index', $data));
 	}
 
 	/**

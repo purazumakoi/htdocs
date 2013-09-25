@@ -41,7 +41,8 @@
 	</div>
 	<div class="container">
 		<div class="hero-unit">
-			<h1>Welcome!</h1>
+			<!--<h1>Welcome!</h1>-->
+			<h1>Welcome, <?php echo $screen_name; ?>!</h1>
 			<p>You have successfully installed the FuelPHP Framework.</p>
 			<p><a class="btn btn-primary btn-large" href="http://docs.fuelphp.com">Read the Docs</a></p>
 		</div>
