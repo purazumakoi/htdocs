@@ -355,7 +355,7 @@ class Request
 		}
 
 		// save the current language so we can restore it after the call
-		$current_language = \Config::get('language', 'en');
+		$current_language = \Config::get('language', 'jp');
 
 		try
 		{
