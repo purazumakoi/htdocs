@@ -42,7 +42,7 @@ class File implements \ArrayAccess, \Iterator, \Countable
 	protected $index = 0;
 
 	/**
-	 * @var  array  Container for validation errors
+	 * @var  array  Container for validation.php errors
 	 */
 	protected $errors = array();
 
@@ -52,7 +52,7 @@ class File implements \ArrayAccess, \Iterator, \Countable
 	protected $config = array(
 		'langCallback'    => null,
 		'moveCallback'    => null,
-		// validation settings
+		// validation.php settings
 		'max_size'        => 0,
 		'max_length'      => 0,
 		'ext_whitelist'   => array(),
@@ -80,12 +80,12 @@ class File implements \ArrayAccess, \Iterator, \Countable
 	);
 
 	/**
-	 * @var  bool  Flag to indicate if validation has run on this object
+	 * @var  bool  Flag to indicate if validation.php has run on this object
 	 */
 	protected $isValidated = false;
 
 	/**
-	 * @var  bool  Flag to indicate the result of the validation run
+	 * @var  bool  Flag to indicate the result of the validation.php run
 	 */
 	protected $isValid = false;
 
@@ -135,7 +135,7 @@ class File implements \ArrayAccess, \Iterator, \Countable
 	}
 
 	/**
-	 * Return the validation state of this object
+	 * Return the validation.php state of this object
 	 *
 	 * @return  bool
 	 */
@@ -185,7 +185,7 @@ class File implements \ArrayAccess, \Iterator, \Countable
 	}
 
 	/**
-	 * Run validation on the uploaded file, based on the config being loaded
+	 * Run validation.php on the uploaded file, based on the config being loaded
 	 *
 	 * @return  bool
 	 */
@@ -194,7 +194,7 @@ class File implements \ArrayAccess, \Iterator, \Countable
 		// reset the error container
 		$this->errors = array();
 
-		// validation starts, call the pre-validation callback
+		// validation.php starts, call the pre-validation.php callback
 		$this->runCallbacks('before_validation');
 
 		// was the upload of the file a success?
@@ -276,10 +276,10 @@ class File implements \ArrayAccess, \Iterator, \Countable
 				$this->addError(static::UPLOAD_ERR_MIME_NOT_WHITELISTED);
 			}
 
-			// update the status of this validation
+			// update the status of this validation.php
 			$this->isValid = empty($this->errors);
 
-			// validation finished, call the post-validation callback
+			// validation.php finished, call the post-validation.php callback
 			$this->runCallbacks('after_validation');
 		}
 		else
@@ -287,14 +287,14 @@ class File implements \ArrayAccess, \Iterator, \Countable
 			// upload was already a failure, store the corresponding error
 			$this->addError($this->container['error']);
 
-			// and mark this validation a failure
+			// and mark this validation.php a failure
 			$this->isValid = false;
 		}
 
-		// set the flag to indicate we ran the validation
+		// set the flag to indicate we ran the validation.php
 		$this->isValidated = true;
 
-		// return the validation state
+		// return the validation.php state
 		return $this->isValid;
 	}
 
@@ -418,13 +418,13 @@ class File implements \ArrayAccess, \Iterator, \Countable
 				$this->addError(static::UPLOAD_ERR_MAX_FILENAME_LENGTH);
 			}
 
-			// update the status of this validation
+			// update the status of this validation.php
 			$this->isValid = empty($this->errors);
 
 			// if the file is still valid, run the before save callbacks
 			if ($this->isValid)
 			{
-				// validation starts, call the pre-save callbacks
+				// validation.php starts, call the pre-save callbacks
 				$this->runCallbacks('before_save');
 
 				// recheck the path, it might have been altered by a callback
@@ -438,7 +438,7 @@ class File implements \ArrayAccess, \Iterator, \Countable
 					}
 				}
 
-				// update the status of this validation
+				// update the status of this validation.php
 				$this->isValid = empty($this->errors);
 			}
 
@@ -476,7 +476,7 @@ class File implements \ArrayAccess, \Iterator, \Countable
 				}
 			}
 
-			// validation starts, call the post-save callback
+			// validation.php starts, call the post-save callback
 			if ($this->isValid)
 			{
 				$this->runCallbacks('after_save');
@@ -517,7 +517,7 @@ class File implements \ArrayAccess, \Iterator, \Countable
 						}
 					}
 
-					// update the status of this validation
+					// update the status of this validation.php
 					$this->isValid = empty($this->errors);
 				}
 			}

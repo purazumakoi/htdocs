@@ -219,7 +219,7 @@ class HTML_QuickForm extends HTML_Common {
     var $_formRules = array();
 
     /**
-     * Array containing the validation errors
+     * Array containing the validation.php errors
      * @since     1.0
      * @var  array
      * @access   private
@@ -339,9 +339,9 @@ class HTML_QuickForm extends HTML_Common {
     // {{{ registerRule()
 
     /**
-     * Registers a new validation rule
+     * Registers a new validation.php rule
      *
-     * @param     string    $ruleName   Name of validation rule
+     * @param     string    $ruleName   Name of validation.php rule
      * @param     string    $type       Either: 'regex', 'function' or 'rule' for an HTML_QuickForm_Rule object
      * @param     string    $data1      Name of function, regular expression or HTML_QuickForm_Rule classname
      * @param     string    $data2      Object parent of above function or HTML_QuickForm_Rule file path
@@ -1001,7 +1001,7 @@ class HTML_QuickForm extends HTML_Common {
     // {{{ addRule()
 
     /**
-     * Adds a validation rule for the given field
+     * Adds a validation.php rule for the given field
      *
      * If the element is in fact a group, it will be considered as a whole.
      * To validate grouped elements as separated entities, 
@@ -1011,8 +1011,8 @@ class HTML_QuickForm extends HTML_Common {
      * @param    string     $message       Message to display for invalid data
      * @param    string     $type          Rule type, use getRegisteredRules() to get types
      * @param    string     $format        (optional)Required for extra rule data
-     * @param    string     $validation    (optional)Where to perform validation: "server", "client"
-     * @param    boolean    $reset         Client-side validation: reset the form element to its original value if there is an error?
+     * @param    string     $validation    (optional)Where to perform validation.php: "server", "client"
+     * @param    boolean    $reset         Client-side validation.php: reset the form element to its original value if there is an error?
      * @param    boolean    $force         Force the rule to be applied, even if the target form element does not exist
      * @since    1.0
      * @access   public
@@ -1055,7 +1055,7 @@ class HTML_QuickForm extends HTML_Common {
             'type'        => $type,
             'format'      => $format,
             'message'     => $message,
-            'validation'  => $validation,
+            'validation.php'  => $validation,
             'reset'       => $reset,
             'dependent'   => $dependent
         );
@@ -1065,9 +1065,9 @@ class HTML_QuickForm extends HTML_Common {
     // {{{ addGroupRule()
 
     /**
-     * Adds a validation rule for the given group of elements
+     * Adds a validation.php rule for the given group of elements
      *
-     * Only groups with a name can be assigned a validation rule
+     * Only groups with a name can be assigned a validation.php rule
      * Use addGroupRule when you need to validate elements inside the group.
      * Use addRule if you need to validate the group as a whole. In this case,
      * the same rule will be applied to all elements in the group.
@@ -1078,8 +1078,8 @@ class HTML_QuickForm extends HTML_Common {
      * @param    string     $type          (optional)Rule type use getRegisteredRules() to get types
      * @param    string     $format        (optional)Required for extra rule data
      * @param    int        $howmany       (optional)How many valid elements should be in the group
-     * @param    string     $validation    (optional)Where to perform validation: "server", "client"
-     * @param    bool       $reset         Client-side: whether to reset the element's value to its original state if validation failed.
+     * @param    string     $validation    (optional)Where to perform validation.php: "server", "client"
+     * @param    bool       $reset         Client-side: whether to reset the element's value to its original state if validation.php failed.
      * @since    2.5
      * @access   public
      * @throws   HTML_QuickForm_Error
@@ -1110,7 +1110,7 @@ class HTML_QuickForm extends HTML_Common {
                                                         'type'        => $type,
                                                         'format'      => $format, 
                                                         'message'     => $rule[0],
-                                                        'validation'  => $validation,
+                                                        'validation.php'  => $validation,
                                                         'reset'       => $reset,
                                                         'group'       => $group);
 
@@ -1147,7 +1147,7 @@ class HTML_QuickForm extends HTML_Common {
             $this->_rules[$group][] = array('type'       => $type,
                                             'format'     => $format, 
                                             'message'    => $arg1,
-                                            'validation' => $validation,
+                                            'validation.php' => $validation,
                                             'howmany'    => $howmany,
                                             'reset'      => $reset);
             if ($type == 'required') {
@@ -1163,12 +1163,12 @@ class HTML_QuickForm extends HTML_Common {
     // {{{ addFormRule()
 
    /**
-    * Adds a global validation rule 
+    * Adds a global validation.php rule
     * 
     * This should be used when for a rule involving several fields or if
-    * you want to use some completely custom validation for your form.
+    * you want to use some completely custom validation.php for your form.
     * The rule function/method should return true in case of successful 
-    * validation and array('element name' => 'error') when there were errors.
+    * validation.php and array('element name' => 'error') when there were errors.
     * 
     * @access   public
     * @param    mixed   Callback, either function name or array(&$object, 'method')
@@ -1352,7 +1352,7 @@ class HTML_QuickForm extends HTML_Common {
     // {{{ getRegisteredRules()
 
     /**
-     * Returns an array of registered validation rules
+     * Returns an array of registered validation.php rules
      *
      * @since     1.0
      * @access    public
@@ -1451,7 +1451,7 @@ class HTML_QuickForm extends HTML_Common {
     // {{{ validate()
 
     /**
-     * Performs the server side validation
+     * Performs the server side validation.php
      * @access    public
      * @since     1.0
      * @return    boolean   true if no error found
@@ -1675,11 +1675,11 @@ class HTML_QuickForm extends HTML_Common {
     // {{{ getValidationScript()
 
     /**
-     * Returns the client side validation script
+     * Returns the client side validation.php script
      *
      * @since     2.0
      * @access    public
-     * @return    string    Javascript to perform validation, empty string if no 'client' rules were added
+     * @return    string    Javascript to perform validation.php, empty string if no 'client' rules were added
      */
     function getValidationScript()
     {
@@ -1701,7 +1701,7 @@ class HTML_QuickForm extends HTML_Common {
 
         foreach ($this->_rules as $elementName => $rules) {
             foreach ($rules as $rule) {
-                if ('client' == $rule['validation']) {
+                if ('client' == $rule['validation.php']) {
                     unset($element);
 
                     $dependent  = isset($rule['dependent']) && is_array($rule['dependent']);
@@ -1709,7 +1709,7 @@ class HTML_QuickForm extends HTML_Common {
 
                     if (isset($rule['group'])) {
                         $group    =& $this->getElement($rule['group']);
-                        // No JavaScript validation for frozen elements
+                        // No JavaScript validation.php for frozen elements
                         if ($group->isFrozen()) {
                             continue 2;
                         }
@@ -1729,7 +1729,7 @@ class HTML_QuickForm extends HTML_Common {
                     } else {
                         $element =& $this->getElement($elementName);
                     }
-                    // No JavaScript validation for frozen elements
+                    // No JavaScript validation.php for frozen elements
                     if (is_object($element) && $element->isFrozen()) {
                         continue 2;
                     } elseif (is_array($element)) {

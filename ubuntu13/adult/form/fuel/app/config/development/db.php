@@ -22,6 +22,8 @@ return array(
 		'default' => array(
 			'hostname'   => 'localhost',
 			'database'   => 'mongo_fuel',
+			'username'   => 'purazumakoi',
+			'password'   => 'otokogackt',
 		),
 	),
 	/*'default' => array(

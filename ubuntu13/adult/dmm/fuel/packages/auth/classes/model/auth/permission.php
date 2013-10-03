@@ -32,17 +32,17 @@ class Auth_Permission extends \Orm\Model
 		'area'           => array(
 			'label'		  => 'auth_model_permission.area',
 			'null'		  => false,
-			'validation'  => array('required', 'max_length' => array(25))
+			'validation.php'  => array('required', 'max_length' => array(25))
 		),
 		'permission'      => array(
 			'label'		  => 'auth_model_permission.permission',
 			'null'		  => false,
-			'validation'  => array('required', 'max_length' => array(25))
+			'validation.php'  => array('required', 'max_length' => array(25))
 		),
 		'description'     => array(
 			'label'		  => 'auth_model_permission.description',
 			'null'		  => false,
-			'validation'  => array('required', 'max_length' => array(255))
+			'validation.php'  => array('required', 'max_length' => array(255))
 		),
 		'actions'         => array(
 			'data_type'	  => 'serialize',

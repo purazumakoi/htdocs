@@ -93,7 +93,7 @@ function PMA_validateSQL($sql)
             // Log on to service
             $srv->start();
 
-            // Do service validation
+            // Do service validation.php
             $str = $srv->validationString($sql);
         }
 

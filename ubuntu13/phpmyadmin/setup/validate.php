@@ -24,7 +24,7 @@ if (!($values instanceof stdClass)) {
 $values = (array)$values;
 $result = PMA_config_validate($vids, $values, true);
 if ($result === false) {
-    $result = 'Wrong data or no validation for ' . $vids;
+    $result = 'Wrong data or no validation.php for ' . $vids;
 }
 echo $result !== true ? json_encode($result) : '';
 ?>

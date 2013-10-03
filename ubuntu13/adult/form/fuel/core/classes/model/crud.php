@@ -36,7 +36,7 @@ class Model_Crud extends \Model implements \Iterator, \ArrayAccess, \Serializabl
 	// protected static $_write_connection = null;
 
 	/**
-	 * @var  array  $_rules  The validation rules (must set this in your Model to use)
+	 * @var  array  $_rules  The validation.php rules (must set this in your Model to use)
 	 */
 	// protected static $_rules = array();
 
@@ -383,7 +383,7 @@ class Model_Crud extends \Model implements \Iterator, \ArrayAccess, \Serializabl
 	protected $_is_frozen = false;
 
 	/**
-	 * @var  object  $_validation  The validation instance
+	 * @var  object  $_validation  The validation.php instance
 	 */
 	protected $_validation = null;
 
@@ -605,7 +605,7 @@ class Model_Crud extends \Model implements \Iterator, \ArrayAccess, \Serializabl
 	}
 
 	/**
-	 * Returns the a validation object for the model.
+	 * Returns the a validation.php object for the model.
 	 *
 	 * @return  object  Validation object
 	 */
@@ -721,9 +721,9 @@ class Model_Crud extends \Model implements \Iterator, \ArrayAccess, \Serializabl
 	}
 
 	/**
-	 * Returns wether the instance will pass validation.
+	 * Returns wether the instance will pass validation.php.
 	 *
-	 * @return  bool  wether the instance passed validation
+	 * @return  bool  wether the instance passed validation.php
 	 */
 	public function validates()
 	{
@@ -742,10 +742,10 @@ class Model_Crud extends \Model implements \Iterator, \ArrayAccess, \Serializabl
 	}
 
 	/**
-	 * Run validation
+	 * Run validation.php
 	 *
 	 * @param   array  $vars  array to validate
-	 * @return  bool   validation result
+	 * @return  bool   validation.php result
 	 */
 	protected function run_validation($vars)
 	{
@@ -821,9 +821,9 @@ class Model_Crud extends \Model implements \Iterator, \ArrayAccess, \Serializabl
 	}
 
 	/**
-	 * Gets called before the validation is ran.
+	 * Gets called before the validation.php is ran.
 	 *
-	 * @param   array  $data  The validation data
+	 * @param   array  $data  The validation.php data
 	 * @return  array
 	 */
 	protected function pre_validate($data)
@@ -832,7 +832,7 @@ class Model_Crud extends \Model implements \Iterator, \ArrayAccess, \Serializabl
 	}
 
 	/**
-	 * Called right after the validation is ran.
+	 * Called right after the validation.php is ran.
 	 *
 	 * @param   bool  $result  Validation result
 	 * @return  bool
@@ -844,7 +844,7 @@ class Model_Crud extends \Model implements \Iterator, \ArrayAccess, \Serializabl
 
 	/**
 	 * Called right after values retrieval, before save,
-	 * update, setting defaults and validation.
+	 * update, setting defaults and validation.php.
 	 *
 	 * @param   array  $values  input array
 	 * @return  array

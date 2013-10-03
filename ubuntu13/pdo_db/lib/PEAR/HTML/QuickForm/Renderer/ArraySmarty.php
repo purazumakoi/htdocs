@@ -31,7 +31,7 @@ require_once 'HTML/QuickForm/Renderer/Array.php';
  * The form array structure is the following:
  * Array (
  *  [frozen]       => whether the complete form is frozen'
- *  [javascript]   => javascript for client-side validation
+ *  [javascript]   => javascript for client-side validation.php
  *  [attributes]   => attributes for <form> tag
  *  [hidden]       => html of all hidden elements
  *  [requirednote] => note about the required elements
@@ -101,7 +101,7 @@ class HTML_QuickForm_Renderer_ArraySmarty extends HTML_QuickForm_Renderer_Array
     var $_required = '';
 
    /**
-    * How to handle error messages in form validation
+    * How to handle error messages in form validation.php
     * @var string
     * @see      setErrorTemplate()
     */
@@ -275,7 +275,7 @@ class HTML_QuickForm_Renderer_ArraySmarty extends HTML_QuickForm_Renderer_Array
     } // end func _renderRequired
 
    /**
-    * Called when an element has a validation error
+    * Called when an element has a validation.php error
     *
     * This method will add the error message to the element label or the element html
     * such as defined with the method setErrorTemplate. If the error placeholder is not found
@@ -343,7 +343,7 @@ class HTML_QuickForm_Renderer_ArraySmarty extends HTML_QuickForm_Renderer_Array
     } // end func setRequiredTemplate
 
    /**
-    * Sets the way elements with validation errors are rendered
+    * Sets the way elements with validation.php errors are rendered
     *
     * You can use {$label} or {$html} placeholders to let the renderer know where
     * where the element label or the element html are positionned according to the

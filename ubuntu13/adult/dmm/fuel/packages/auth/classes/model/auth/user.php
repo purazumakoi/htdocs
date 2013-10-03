@@ -33,27 +33,27 @@ class Auth_User extends \Orm\Model
 			'label'		  => 'auth_model_user.name',
 			'default' 	  => 0,
 			'null'		  => false,
-			'validation'  => array('required', 'max_length' => array(255))
+			'validation.php'  => array('required', 'max_length' => array(255))
 		),
 		'email'           => array(
 			'label'		  => 'auth_model_user.email',
 			'default' 	  => 0,
 			'null'		  => false,
-			'validation'  => array('required', 'valid_email')
+			'validation.php'  => array('required', 'valid_email')
 		),
 		'group_id'        => array(
 			'label'		  => 'auth_model_user.group_id',
 			'default' 	  => 0,
 			'null'		  => false,
 			'form'  	  => array('type' => 'select'),
-			'validation'  => array('required', 'is_numeric')
+			'validation.php'  => array('required', 'is_numeric')
 		),
 		'password'        => array(
 			'label'		  => 'auth_model_user.password',
 			'default' 	  => 0,
 			'null'		  => false,
 			'form'  	  => array('type' => 'password'),
-			'validation'  => array('min_length' => array(8), 'match_field' => array('confirm'))
+			'validation.php'  => array('min_length' => array(8), 'match_field' => array('confirm'))
 		),
 		'last_login'	  => array(
 			'form'  	  => array('type' => false),

@@ -398,7 +398,7 @@ class HTML_QuickForm2_Element_Select extends HTML_QuickForm2_Element
     * Returns the value of the <select> element
     *
     * Please note that the returned value may not necessarily be equal to that
-    * passed to {@link setValue()}. It passes "intrinsic validation" confirming
+    * passed to {@link setValue()}. It passes "intrinsic validation.php" confirming
     * that such value could possibly be submitted by this <select> element.   
     * Specifically, this method will return null if the elements "disabled"
     * attribute is set, it will not return values if there are no options having

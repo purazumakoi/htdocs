@@ -19,7 +19,7 @@ namespace Fuel\Core;
 /**
  * Validation
  *
- * Static object to allow static usage of validation through singleton.
+ * Static object to allow static usage of validation.php through singleton.
  *
  * @package     Fuel
  * @subpackage  Core
@@ -33,7 +33,7 @@ class Validation
 	protected static $active;
 
 	/**
-	 * @var  Fieldset_Field  keeps a reference to an instance of the Fieldset_Field validation is being run on
+	 * @var  Fieldset_Field  keeps a reference to an instance of the Fieldset_Field validation.php is being run on
 	 */
 	protected static $active_field;
 
@@ -68,7 +68,7 @@ class Validation
 	}
 
 	/**
-	 * Fetch the currently active validation instance
+	 * Fetch the currently active validation.php instance
 	 *
 	 * @return  Validation
 	 */
@@ -78,7 +78,7 @@ class Validation
 	}
 
 	/**
-	 * Set or unset the currently active validation instance
+	 * Set or unset the currently active validation.php instance
 	 */
 	protected static function set_active($instance = null)
 	{
@@ -107,7 +107,7 @@ class Validation
 	protected $fieldset;
 
 	/**
-	 * @var  array  available after validation started running: contains given input values
+	 * @var  array  available after validation.php started running: contains given input values
 	 */
 	protected $input = array();
 
@@ -122,7 +122,7 @@ class Validation
 	protected $errors = array();
 
 	/**
-	 * @var  array  contains a list of classnames and objects that may contain validation methods
+	 * @var  array  contains a list of classnames and objects that may contain validation.php methods
 	 */
 	protected $callables = array();
 
@@ -132,7 +132,7 @@ class Validation
 	protected $global_input_fallback = true;
 
 	/**
-	 * @var  array  contains validation error messages, will overwrite those from lang files
+	 * @var  array  contains validation.php error messages, will overwrite those from lang files
 	 */
 	protected $error_messages = array();
 
@@ -149,7 +149,7 @@ class Validation
 		}
 
 		$this->callables = array($this);
-		$this->global_input_fallback = \Config::get('validation.global_input_fallback', true);
+		$this->global_input_fallback = \Config::get('validation.php.global_input_fallback', true);
 	}
 
 	/**
@@ -209,7 +209,7 @@ class Validation
 	}
 
 	/**
-	 * This will overwrite lang file messages for this validation instance
+	 * This will overwrite lang file messages for this validation.php instance
 	 *
 	 * @param   string
 	 * @param   string
@@ -230,7 +230,7 @@ class Validation
 	}
 
 	/**
-	 * Fetches a specific error message for this validation instance
+	 * Fetches a specific error message for this validation.php instance
 	 *
 	 * @param   string
 	 * @return  string
@@ -318,14 +318,14 @@ class Validation
 	}
 
 	/**
-	 * Run validation
+	 * Run validation.php
 	 *
-	 * Performs validation with current fieldset and on given input, will try POST
+	 * Performs validation.php with current fieldset and on given input, will try POST
 	 * when input wasn't given.
 	 *
 	 * @param   array  input that overwrites POST values
-	 * @param   bool   will skip validation of values it can't find or are null
-	 * @return  bool   whether validation succeeded
+	 * @param   bool   will skip validation.php of values it can't find or are null
+	 * @return  bool   whether validation.php succeeded
 	 */
 	public function run($input = null, $allow_partial = false, $temp_callables = array())
 	{
@@ -553,11 +553,11 @@ class Validation
 	/**
 	 * Error
 	 *
-	 * Return specific error or all errors thrown during validation
+	 * Return specific error or all errors thrown during validation.php
 	 *
 	 * @param   string  fieldname
 	 * @param   mixed   value to return when not validated
-	 * @return  Validation_Error|array  the validation error object or full array of error objects
+	 * @return  Validation_Error|array  the validation.php error object or full array of error objects
 	 */
 	public function error($field = null, $default = false)
 	{
@@ -580,11 +580,11 @@ class Validation
 	public function show_errors($options = array())
 	{
 		$default = array(
-			'open_list'    => \Config::get('validation.open_list', '<ul>'),
-			'close_list'   => \Config::get('validation.close_list', '</ul>'),
-			'open_error'   => \Config::get('validation.open_error', '<li>'),
-			'close_error'  => \Config::get('validation.close_error', '</li>'),
-			'no_errors'    => \Config::get('validation.no_errors', '')
+			'open_list'    => \Config::get('validation.php.open_list', '<ul>'),
+			'close_list'   => \Config::get('validation.php.close_list', '</ul>'),
+			'open_error'   => \Config::get('validation.php.open_error', '<li>'),
+			'close_error'  => \Config::get('validation.php.close_error', '</li>'),
+			'no_errors'    => \Config::get('validation.php.no_errors', '')
 		);
 		$options = array_merge($default, $options);
 
@@ -655,7 +655,7 @@ class Validation
 	}
 
 	/* -------------------------------------------------------------------------------
-	 * The validation methods
+	 * The validation.php methods
 	 * ------------------------------------------------------------------------------- */
 
 	/**
@@ -966,8 +966,8 @@ class Validation
 	 * Checks whether string input is valid date format
 	 *
 	 * @param   string
-	 * @param   string  The format used at the time of a validation
-	 * @param   bool    Whether validation checks strict
+	 * @param   string  The format used at the time of a validation.php
+	 * @param   bool    Whether validation.php checks strict
 	 * @return  bool
 	 */
 	public function _validation_valid_date($val, $format = null, $strict = true)

@@ -33,7 +33,7 @@ class Upload implements \ArrayAccess, \Iterator, \Countable
 		'auto_process'    => false,
 		'langCallback'    => null,
 		'moveCallback'    => null,
-		// validation settings
+		// validation.php settings
 		'max_size'        => 0,
 		'max_length'      => 0,
 		'ext_whitelist'   => array(),
@@ -94,7 +94,7 @@ class Upload implements \ArrayAccess, \Iterator, \Countable
 			throw new NoFilesException('No uploaded files were found. Did you specify "enctype" in your &lt;form&gt; tag?');
 		}
 
-		// if auto-process was active, run validation on all file objects
+		// if auto-process was active, run validation.php on all file objects
 		if ($this->defaults['auto_process'])
 		{
 			// process all data in the $_FILES array
@@ -156,7 +156,7 @@ class Upload implements \ArrayAccess, \Iterator, \Countable
 	}
 
 	/**
-	 * Run validation on all selected file objects
+	 * Run validation.php on all selected file objects
 	 *
 	 * @param  int|string|array  $selection  Optional array index, element name or array with filter values
 	 *

@@ -233,7 +233,7 @@ AJAX.registerOnload('tbl_zoom_plot_jqplot.js', function() {
     });
 
     /**
-     * Input form validation
+     * Input form validation.php
      **/
     $('#inputFormSubmitId').click(function() {
         if ($('#tableid_0').get(0).selectedIndex == 0 || $('#tableid_1').get(0).selectedIndex == 0) {

@@ -110,7 +110,7 @@ abstract class HTML_QuickForm2_Node extends HTML_Common2
     protected $rules = array();
 
    /**
-    * Error message (usually set via Rule if validation fails)
+    * Error message (usually set via Rule if validation.php fails)
     * @var  string
     */
     protected $error = null;
@@ -393,10 +393,10 @@ abstract class HTML_QuickForm2_Node extends HTML_Common2
     abstract protected function updateValue();
 
    /**
-    * Adds a validation rule
+    * Adds a validation.php rule
     *
     * @param    HTML_QuickForm2_Rule|string     Validation rule or rule type
-    * @param    string                          Message to display if validation fails
+    * @param    string                          Message to display if validation.php fails
     * @param    mixed                           Additional data for the rule
     * @return   HTML_QuickForm2_Rule            The added rule
     * @throws   HTML_QuickForm2_InvalidArgumentException    if $rule is of a
@@ -423,7 +423,7 @@ abstract class HTML_QuickForm2_Node extends HTML_Common2
 
 
    /**
-    * Creates a validation rule
+    * Creates a validation.php rule
     *
     * This method is mostly useful when when chaining several rules together
     * via {@link HTML_QuickForm2_Rule::and_()} and {@link HTML_QuickForm2_Rule::or_()}
@@ -434,7 +434,7 @@ abstract class HTML_QuickForm2_Node extends HTML_Common2
     * </code>
     *
     * @param    string                  Rule type
-    * @param    string                  Message to display if validation fails
+    * @param    string                  Message to display if validation.php fails
     * @param    mixed                   Additional data for the rule
     * @return   HTML_QuickForm2_Rule    The created rule
     * @throws   HTML_QuickForm2_InvalidArgumentException If rule type is unknown
@@ -464,7 +464,7 @@ abstract class HTML_QuickForm2_Node extends HTML_Common2
 
 
    /**
-    * Performs the server-side validation
+    * Performs the server-side validation.php
     *
     * @return   boolean     Whether the element is valid
     */

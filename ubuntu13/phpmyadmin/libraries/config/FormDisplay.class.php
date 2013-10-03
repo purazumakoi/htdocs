@@ -34,7 +34,7 @@ class FormDisplay
     private $_forms = array();
 
     /**
-     * Stores validation errors, indexed by paths
+     * Stores validation.php errors, indexed by paths
      * [ Form_name ] is an array of form errors
      * [path] is a string storing error associated with single field
      * @var array
@@ -99,7 +99,7 @@ class FormDisplay
      *
      * @param string $form_name
      * @param array  $form
-     * @param int    $server_id 0 if new server, validation; >= 1 if editing a server
+     * @param int    $server_id 0 if new server, validation.php; >= 1 if editing a server
      *
      * @return void
      */
@@ -120,7 +120,7 @@ class FormDisplay
      * Processes forms, returns true on successful save
      *
      * @param bool $allow_partial_save allows for partial form saving
-     *                                 on failed validation
+     *                                 on failed validation.php
      * @param bool $check_form_submit  whether check for $_POST['submit_save']
      *
      * @return boolean whether processing was successful
@@ -139,7 +139,7 @@ class FormDisplay
     }
 
     /**
-     * Runs validation for all registered forms
+     * Runs validation.php for all registered forms
      *
      * @return void
      */
@@ -163,7 +163,7 @@ class FormDisplay
             }
         }
 
-        // run validation
+        // run validation.php
         $errors = PMA_config_validate($paths, $values, false);
 
         // change error keys from canonical paths to work paths
@@ -491,7 +491,7 @@ class FormDisplay
      *
      * @param array|string $forms              array of form names
      * @param bool         $allow_partial_save allows for partial form saving on
-     *                                         failed validation
+     *                                         failed validation.php
      *
      * @return boolean true on success (no errors and all saved)
      */
@@ -653,7 +653,7 @@ class FormDisplay
     }
 
     /**
-     * Tells whether form validation failed
+     * Tells whether form validation.php failed
      *
      * @return boolean
      */

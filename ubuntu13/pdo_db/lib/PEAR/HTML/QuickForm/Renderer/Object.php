@@ -260,7 +260,7 @@ class QuickformForm
     var $frozen;
 
    /**
-    * Javascript for client-side validation
+    * Javascript for client-side validation.php
     * @var string $javascript
     */
     var $javascript;
@@ -284,7 +284,7 @@ class QuickformForm
     var $hidden;
 
    /**
-    * Set if there were validation errors.  
+    * Set if there were validation.php errors.
     * StdClass object with element names for keys and their
     * error messages as values
     * @var object $errors

@@ -64,7 +64,7 @@ abstract class HTML_QuickForm2_Rule
     protected $owner;
 
    /**
-    * An error message to display if validation fails
+    * An error message to display if validation.php fails
     * @var  string
     */
     protected $message;
@@ -101,7 +101,7 @@ abstract class HTML_QuickForm2_Rule
     * Class constructor
     *
     * @param    HTML_QuickForm2_Node    Element to validate
-    * @param    string                  Error message to display if validation fails
+    * @param    string                  Error message to display if validation.php fails
     * @param    mixed                   Additional data for the rule
     * @param    string                  Type that was provided to Factory when
     *                                   creating this Rule instance, shouldn't
@@ -142,7 +142,7 @@ abstract class HTML_QuickForm2_Rule
    /**
     * Sets the error message output by the rule
     *
-    * @param    string                  Error message to display if validation fails
+    * @param    string                  Error message to display if validation.php fails
     * @return   HTML_QuickForm2_Rule
     */
     public function setMessage($message)
@@ -219,10 +219,10 @@ abstract class HTML_QuickForm2_Rule
     }
 
    /**
-    * Performs validation
+    * Performs validation.php
     *
     * The whole rule chain is executed. Note that the side effect of this
-    * method is setting the error message on element if validation fails
+    * method is setting the error message on element if validation.php fails
     *
     * @return   boolean     Whether the element is valid
     */

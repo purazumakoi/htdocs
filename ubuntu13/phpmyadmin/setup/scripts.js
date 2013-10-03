@@ -39,7 +39,7 @@ $(function() {
 // ------------------------------------------------------------------
 
 // ------------------------------------------------------------------
-// Form validation and field operations
+// Form validation.php and field operations
 //
 
 /**
@@ -122,7 +122,7 @@ $.extend(true, validators, {
 });
 
 /**
- * Calls server-side validation procedures
+ * Calls server-side validation.php procedures
  *
  * @param {Element} parent  input field in <fieldset> or <fieldset>
  * @param {String}  id      validator id
@@ -179,7 +179,7 @@ function ajaxValidate(parent, id, values)
 }
 
 //
-// END: Form validation and field operations
+// END: Form validation.php and field operations
 // ------------------------------------------------------------------
 
 // ------------------------------------------------------------------

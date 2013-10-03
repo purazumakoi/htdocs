@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Various validation functions
+ * Various validation.php functions
  *
  * Validation function takes two argument: id for which it is called
  * and array of fields' values (usually values for entire formset, as defined
@@ -58,7 +58,7 @@ function PMA_config_get_validators()
 }
 
 /**
- * Runs validation $validator_id on values $values and returns error list.
+ * Runs validation.php $validator_id on values $values and returns error list.
  *
  * Return values:
  * o array, keys - field path or formset id, values - array of errors
@@ -103,7 +103,7 @@ function PMA_config_validate($validator_id, &$values, $isPostSource)
     // validate
     $result = array();
     foreach ($vids as $vid) {
-        // call appropriate validation functions
+        // call appropriate validation.php functions
         foreach ((array)$validators[$vid] as $validator) {
             $vdef = (array) $validator;
             $vname = array_shift($vdef);
@@ -424,7 +424,7 @@ function validate_trusted_proxies($path, $values)
                 : $ip . ': ' . $v;
         }
     } else {
-        // AJAX validation
+        // AJAX validation.php
         $lines = explode("\n", $values[$path]);
     }
     foreach ($lines as $line) {

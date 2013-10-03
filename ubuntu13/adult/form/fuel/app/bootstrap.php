@@ -11,6 +11,10 @@ require COREPATH.'bootstrap.php';
 Autoloader::add_classes(array(
 	// Add classes you want to override here
 	// Example: 'View' => APPPATH.'classes/view.php',
+	//デバッグ、フォーム、バリデーションのコアクラスをオーバーライドしながら拡張
+	'Debug' => APPPATH.'classes/debug.php',
+	'Form' => APPPATH.'classes/form.php',
+	'Validation' => APPPATH.'classes/validation.php',
 ));
 
 // Register the autoloader
@@ -28,3 +32,6 @@ Fuel::$env = (isset($_SERVER['FUEL_ENV']) ? $_SERVER['FUEL_ENV'] : Fuel::DEVELOP
 
 // Initialize the framework with the config file.
 Fuel::init('config.php');
+
+//オレオレベタ書きfunction（オレオレヘルパー）の置き場所を追記
+include APPPATH.'vendor/common/appcommon.php';

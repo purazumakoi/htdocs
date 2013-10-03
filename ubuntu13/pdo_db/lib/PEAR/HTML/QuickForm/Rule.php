@@ -24,7 +24,7 @@ class HTML_QuickForm_Rule
     * Name of the rule to use in validate method
     *
     * This property is used in more global rules like Callback and Regex
-    * to determine which callback and which regex is to be used for validation
+    * to determine which callback and which regex is to be used for validation.php
     *
     * @var  string
     * @access   public
@@ -57,7 +57,7 @@ class HTML_QuickForm_Rule
      *
      * @param     mixed     Options for the rule
      * @access    public
-     * @return    array     first element is code to setup validation, second is the check itself
+     * @return    array     first element is code to setup validation.php, second is the check itself
      */
     function getValidationScript($options = null)
     {

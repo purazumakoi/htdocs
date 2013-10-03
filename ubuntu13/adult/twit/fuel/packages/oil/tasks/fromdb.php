@@ -19,7 +19,7 @@ namespace Fuel\Tasks;
  *
  * Based on https://github.com/mp-php/fuel-myapp/blob/master/tasks/scafdb.php
  *
- * @author     Mamoru Otsuka http://madroom-project.blogspot.jp/
+ * @author     Mamoru Otsuka http://madroom-project.blogspot.ja/
  * @copyright  2012 Mamoru Otsuka
  * @license    WTFPL http://sam.zoy.org/wtfpl/COPYING
  */

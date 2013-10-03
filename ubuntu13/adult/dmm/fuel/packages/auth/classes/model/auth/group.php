@@ -33,7 +33,7 @@ class Auth_Group extends \Orm\Model
 			'label'		  => 'auth_model_group.name',
 			'default' 	  => '',
 			'null'		  => false,
-			'validation'  => array('required', 'max_length' => array(255))
+			'validation.php'  => array('required', 'max_length' => array(255))
 		),
 		'user_id'         => array(
 			'default' 	  => 0,

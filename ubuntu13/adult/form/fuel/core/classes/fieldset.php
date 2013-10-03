@@ -113,7 +113,7 @@ class Fieldset
 	protected $fields = array();
 
 	/**
-	 * @var  Validation  instance of validation
+	 * @var  Validation  instance of validation.php
 	 */
 	protected $validation;
 
@@ -432,7 +432,7 @@ class Fieldset
 	 */
 	public function add_model($class, $instance = null, $method = 'set_form_fields')
 	{
-		// Add model to validation callables for validation rules
+		// Add model to validation.php callables for validation.php rules
 		$this->validation()->add_callable($class);
 
 		if ((is_string($class) and is_callable($callback = array('\\'.$class, $method)))
@@ -696,7 +696,7 @@ class Fieldset
 	}
 
 	/**
-	 * Alias for $this->validation()->input()
+	 * Alias for $this->validation.php()->input()
 	 *
 	 * @return  mixed
 	 */
@@ -706,7 +706,7 @@ class Fieldset
 	}
 
 	/**
-	 * Alias for $this->validation()->validated()
+	 * Alias for $this->validation.php()->validated()
 	 *
 	 * @return  mixed
 	 */
@@ -716,7 +716,7 @@ class Fieldset
 	}
 
 	/**
-	 * Alias for $this->validation()->error()
+	 * Alias for $this->validation.php()->error()
 	 *
 	 * @return  Validation_Error|array
 	 */
@@ -726,7 +726,7 @@ class Fieldset
 	}
 
 	/**
-	 * Alias for $this->validation()->show_errors()
+	 * Alias for $this->validation.php()->show_errors()
 	 *
 	 * @return  string
 	 */

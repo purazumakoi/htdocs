@@ -294,7 +294,7 @@ class HTML_QuickForm2_Factory
     *
     * @param    string                  Rule type name (treated case-insensitively)
     * @param    HTML_QuickForm2_Node    Element to validate by the rule
-    * @param    string                  Message to display if validation fails
+    * @param    string                  Message to display if validation.php fails
     * @param    mixed                   Additional data for the rule
     * @return   HTML_QuickForm2_Rule    A created Rule
     * @throws   HTML_QuickForm2_InvalidArgumentException If rule type is unknown

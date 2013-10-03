@@ -185,7 +185,7 @@ function getIdPrefix(element)
 }
 
 // ------------------------------------------------------------------
-// Form validation and field operations
+// Form validation.php and field operations
 //
 
 // form validator assignments
@@ -275,7 +275,7 @@ var validators = {
  * @param {String}  id       field id
  * @param {String}  type     validator (key in validators object)
  * @param {boolean} onKeyUp  whether fire on key up
- * @param {Array}   params   validation function parameters
+ * @param {Array}   params   validation.php function parameters
  */
 function validateField(id, type, onKeyUp, params)
 {
@@ -514,7 +514,7 @@ AJAX.registerOnload('config.js', function() {
 });
 
 //
-// END: Form validation and field operations
+// END: Form validation.php and field operations
 // ------------------------------------------------------------------
 
 // ------------------------------------------------------------------

@@ -33,7 +33,7 @@ class Auth_Role extends \Orm\Model
 			'label'		  => 'auth_model_role.name',
 			'default' 	  => 0,
 			'null'		  => false,
-			'validation'  => array('required', 'max_length' => array(255))
+			'validation.php'  => array('required', 'max_length' => array(255))
 		),
 		'filter'          => array(
 			'label'		  => 'auth_model_role.filter',
@@ -42,7 +42,7 @@ class Auth_Role extends \Orm\Model
 			'default' 	  => 0,
 			'null'		  => false,
 			'form'		  => array('type' => 'select'),
-			'validation'  => array(),
+			'validation.php'  => array(),
 			'default'	  => '',
 		),
 		'user_id'         => array(

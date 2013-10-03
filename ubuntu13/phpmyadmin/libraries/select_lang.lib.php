@@ -440,7 +440,7 @@ if (! empty($GLOBALS['cfg']['FilterLanguages'])) {
 $GLOBALS['mysql_charset_map'] = array(
     'big5'         => 'big5',
     'cp-866'       => 'cp866',
-    'euc-jp'       => 'ujis',
+    'euc-ja'       => 'ujis',
     'euc-kr'       => 'euckr',
     'gb2312'       => 'gb2312',
     'gbk'          => 'gbk',

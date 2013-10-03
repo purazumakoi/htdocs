@@ -21,7 +21,7 @@
 require_once('HTML/QuickForm/Rule.php');
 
 /**
-* Email validation rule
+* Email validation.php rule
 * @version     1.0
 */
 class HTML_QuickForm_Rule_Email extends HTML_QuickForm_Rule

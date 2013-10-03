@@ -78,8 +78,8 @@ return array(
 	/**
 	 * Localization & internationalization settings
 	 */
-	'language'           => 'jp', // Default language
-	'language_fallback'  => 'jp', // Fallback language when file isn't available for default language
+	'language'           => 'ja', // Default language
+	'language_fallback'  => 'ja', // Fallback language when file isn't available for default language
 	'locale'             => 'ja_JP', // PHP set_locale() setting, null to not set
 
 	/**
@@ -201,7 +201,7 @@ return array(
 	/**
 	 * Validation settings
 	 */
-	// 'validation' => array(
+	// 'validation.php' => array(
 		/**
 		 * Wether to fallback to global when a value is not found in the input array.
 		 */
@@ -302,9 +302,9 @@ return array(
 		/**
 		 * Language files to autoload
 		 *
-		 * Examples: if you want to load 'validation' lang into a group 'validation' you only have to
-		 * add 'validation'. If you want to add it to another group (example: 'forms') you have to
-		 * add it like 'validation' => 'forms'.
+		 * Examples: if you want to load 'validation.php' lang into a group 'validation.php' you only have to
+		 * add 'validation.php'. If you want to add it to another group (example: 'forms') you have to
+		 * add it like 'validation.php' => 'forms'.
 		 * If you don't want the lang in a group use null as groupname.
 		 */
 		// 'language'  => array(),

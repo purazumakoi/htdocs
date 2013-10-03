@@ -45,7 +45,7 @@ class Fieldset_Field
 	protected $type = 'text';
 
 	/**
-	 * @var  string  Field label for validation errors and form label generation
+	 * @var  string  Field label for validation.php errors and form label generation
 	 */
 	protected $label = '';
 
@@ -60,7 +60,7 @@ class Fieldset_Field
 	protected $description = '';
 
 	/**
-	 * @var  array  Rules for validation
+	 * @var  array  Rules for validation.php
 	 */
 	protected $rules = array();
 
@@ -268,10 +268,10 @@ class Fieldset_Field
 	}
 
 	/**
-	 * Add a validation rule
+	 * Add a validation.php rule
 	 * any further arguements after the callback will be used as arguements for the callback
 	 *
-	 * @param   string|Callback	either a validation rule or full callback
+	 * @param   string|Callback	either a validation.php rule or full callback
 	 * @return  Fieldset_Field  this, to allow chaining
 	 */
 	public function add_rule($callback)
@@ -289,9 +289,9 @@ class Fieldset_Field
 	}
 
 	/**
-	 * Delete a validation rule
+	 * Delete a validation.php rule
 	 *
-	 * @param   string|Callback	either a validation rule or full callback
+	 * @param   string|Callback	either a validation.php rule or full callback
 	 * @param   bool	whether to also reset related attributes
 	 * @return  Fieldset_Field  this, to allow chaining
 	 */
@@ -622,7 +622,7 @@ class Fieldset_Field
 	}
 
 	/**
-	 * Alias for $this->fieldset->validation->input() for this field
+	 * Alias for $this->fieldset->validation.php->input() for this field
 	 *
 	 * @return  mixed
 	 */
@@ -632,7 +632,7 @@ class Fieldset_Field
 	}
 
 	/**
-	 * Alias for $this->fieldset->validation->validated() for this field
+	 * Alias for $this->fieldset->validation.php->validated() for this field
 	 *
 	 * @return  mixed
 	 */
@@ -642,7 +642,7 @@ class Fieldset_Field
 	}
 
 	/**
-	 * Alias for $this->fieldset->validation->error() for this field
+	 * Alias for $this->fieldset->validation.php->error() for this field
 	 *
 	 * @return  Validation_Error
 	 */

@@ -66,9 +66,9 @@ function nullify(theType, urlField, md5Field, multi_edit)
 
 
 /**
- * javascript DateTime format validation.
+ * javascript DateTime format validation.php.
  * its used to prevent adding default (0000-00-00 00:00:00) to database when user enter wrong values
- * Start of validation part
+ * Start of validation.php part
  */
 //function checks the number of days in febuary
 function daysInFebruary (year)
@@ -83,7 +83,7 @@ function fractionReplace(num)
 }
 
 /* function to check the validity of date
-* The following patterns are accepted in this validation (accepted in mysql as well)
+* The following patterns are accepted in this validation.php (accepted in mysql as well)
 * 1) 2001-12-23
 * 2) 2001-1-2
 * 3) 02-12-23
@@ -129,7 +129,7 @@ function isDate(val,tmstmp)
 }
 
 /* function to check the validity of time
-* The following patterns are accepted in this validation (accepted in mysql as well)
+* The following patterns are accepted in this validation.php (accepted in mysql as well)
 * 1) 2:3:4
 * 2) 2:23:43
 */
@@ -214,7 +214,7 @@ function verificationsAfterFieldChange(urlField, multi_edit, theType)
         }
     }
  }
- /* End of datetime validation*/
+ /* End of datetime validation.php*/
 
 
 /**

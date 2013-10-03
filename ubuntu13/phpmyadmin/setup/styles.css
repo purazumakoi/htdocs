@@ -613,7 +613,7 @@ dd:before {
     content: "\25B8  ";
 }
 
-/* links on failed validation page, when saving a form */
+/* links on failed validation.php page, when saving a form */
 
 a.btn {
     padding: 1px 5px;

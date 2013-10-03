@@ -21,7 +21,7 @@
 // $Id: RuleRegistry.php,v 1.14 2005/07/22 15:06:25 avb Exp $
 
 /**
-* Registers rule objects and uses them for validation
+* Registers rule objects and uses them for validation.php
 *
 */
 class HTML_QuickForm_RuleRegistry
@@ -38,7 +38,7 @@ class HTML_QuickForm_RuleRegistry
      * Returns a singleton of HTML_QuickForm_RuleRegistry
      *
      * Usually, only one RuleRegistry object is needed, this is the reason
-     * why it is recommended to use this method to get the validation object. 
+     * why it is recommended to use this method to get the validation.php object.
      *
      * @access    public
      * @static
@@ -54,7 +54,7 @@ class HTML_QuickForm_RuleRegistry
     } // end func singleton
 
     /**
-     * Registers a new validation rule
+     * Registers a new validation.php rule
      *
      * In order to use a custom rule in your form, you need to register it
      * first. For regular expressions, one can directly use the 'regex' type
@@ -66,7 +66,7 @@ class HTML_QuickForm_RuleRegistry
      * You can also register an HTML_QuickForm_Rule subclass with its own
      * validate() method.
      *
-     * @param     string    $ruleName   Name of validation rule
+     * @param     string    $ruleName   Name of validation.php rule
      * @param     string    $type       Either: 'regex', 'function' or null
      * @param     string    $data1      Name of function, regular expression or
      *                                  HTML_QuickForm_Rule object class name
@@ -122,7 +122,7 @@ class HTML_QuickForm_RuleRegistry
     } // end func getRule
 
     /**
-     * Performs validation on the given values
+     * Performs validation.php on the given values
      *
      * @param     string   $ruleName        Name of the rule to be used
      * @param     mixed    $values          Can be a scalar or an array of values 
@@ -150,7 +150,7 @@ class HTML_QuickForm_RuleRegistry
     } // end func validate
 
     /**
-     * Returns the validation test in javascript code
+     * Returns the validation.php test in javascript code
      *
      * @param     mixed     Element(s) the rule applies to
      * @param     string    Element name, in case $element is not array

@@ -67,7 +67,7 @@ RTE.COMMON = {
          *           to an element that is being validated
          */
         var $elm = null;
-        // Common validation. At the very least the name
+        // Common validation.php. At the very least the name
         // and the definition must be provided for an item
         $elm = $('table.rte_table').last().find('input[name=item_name]');
         if ($elm.val() === '') {
@@ -86,7 +86,7 @@ RTE.COMMON = {
             alert(PMA_messages['strFormEmpty']);
             return false;
         }
-        // The validation has so far passed, so now
+        // The validation.php has so far passed, so now
         // we can validate item-specific fields.
         return this.validateCustom();
     }, // end validate()
@@ -487,7 +487,7 @@ RTE.ROUTINE = {
      */
     validateCustom: function () {
         /**
-         * @var isSuccess Stores the outcome of the validation
+         * @var isSuccess Stores the outcome of the validation.php
          */
         var isSuccess = true;
         /**

@@ -284,7 +284,7 @@ class Upload
 	// ---------------------------------------------------------------------------
 
 	/**
-	 * Process the uploaded files, and run the validation
+	 * Process the uploaded files, and run the validation.php
 	 *
 	 * @return	void
 	 */

@@ -402,7 +402,7 @@ abstract class HTML_QuickForm2_Container extends HTML_QuickForm2_Node
 
 
    /**
-    * Performs the server-side validation
+    * Performs the server-side validation.php
     *
     * This method also calls validate() on all contained elements.
     *

@@ -31,12 +31,12 @@ require_once 'HTML/QuickForm/Renderer.php';
  * The form array structure is the following:
  * array(
  *   'frozen'           => 'whether the form is frozen',
- *   'javascript'       => 'javascript for client-side validation',
+ *   'javascript'       => 'javascript for client-side validation.php',
  *   'attributes'       => 'attributes for <form> tag',
  *   'requirednote      => 'note about the required elements',
  *   // if we set the option to collect hidden elements
  *   'hidden'           => 'collected html of all hidden elements',
- *   // if there were some validation errors:
+ *   // if there were some validation.php errors:
  *   'errors' => array(
  *     '1st element name' => 'Error for the 1st element',
  *     ...

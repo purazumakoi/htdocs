@@ -197,7 +197,7 @@ function PMA_readUserprefsFieldNames(array $forms = null)
 /**
  * Updates one user preferences option (loads and saves to database).
  *
- * No validation is done!
+ * No validation.php is done!
  *
  * @param string $path          configuration
  * @param mixed  $value         value

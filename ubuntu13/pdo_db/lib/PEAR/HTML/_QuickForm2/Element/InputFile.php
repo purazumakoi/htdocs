@@ -213,12 +213,12 @@ class HTML_QuickForm2_Element_InputFile extends HTML_QuickForm2_Element_Input
     }
 
    /**
-    * Performs the server-side validation
+    * Performs the server-side validation.php
     *
     * Before the Rules added to the element kick in, the element checks the
     * error code added to the $_FILES array by PHP. If the code isn't
     * UPLOAD_ERR_OK or UPLOAD_ERR_NO_FILE then a built-in error message will be
-    * displayed and no further validation will take place.
+    * displayed and no further validation.php will take place.
     *
     * @return   boolean     Whether the element is valid
     */

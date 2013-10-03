@@ -293,7 +293,7 @@ foreach ($rows as $row_id => $current_row) {
                 $column['len'] = 30;
             }
         }
-        //Call validation when the form submited...
+        //Call validation.php when the form submited...
         $unnullify_trigger = $chg_evt_handler
             . "=\"return verificationsAfterFieldChange('"
             . PMA_escapeJsString($column['Field_md5']) . "', '"

@@ -174,7 +174,7 @@ class HTML_QuickForm_Renderer_Default extends HTML_QuickForm_Renderer
 
    /**
     * Called when visiting a form, after processing all form elements
-    * Adds required note, form attributes, validation javascript and form content.
+    * Adds required note, form attributes, validation.php javascript and form content.
     * 
     * @param    object      An HTML_QuickForm object being visited
     * @access   public
@@ -195,7 +195,7 @@ class HTML_QuickForm_Renderer_Default extends HTML_QuickForm_Renderer
         }
         $this->_hiddenHtml = '';
         $this->_html = str_replace('{content}', $this->_html, $html);
-        // add a validation script
+        // add a validation.php script
         if ('' != ($script = $form->getValidationScript())) {
             $this->_html = $script . "\n" . $this->_html;
         }
@@ -359,7 +359,7 @@ class HTML_QuickForm_Renderer_Default extends HTML_QuickForm_Renderer
             //for ($i = 0; $i < count($this->_groupElements); $i++) {
             //    $html .= (0 == $i? '': $separator[($i - 1) % $count]) . $this->_groupElements[$i];
             //}
-						// ƒZƒpƒŒ[ƒ^‚ª2ŒÂ‚Ì‚Í‹²‚Ş‚æ‚¤‚ÉC³ 2007/11/9 ‚Ğ‚ë‚µ
+						// ï¿½Zï¿½pï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½2ï¿½Â‚Ìï¿½ï¿½Í‹ï¿½ï¿½Ş‚æ‚¤ï¿½ÉCï¿½ï¿½ 2007/11/9 ï¿½Ğ‚ë‚µ
 						if($count == 2){
 							for ($i = 0; $i < count($this->_groupElements); $i++) {
 									$html .= $separator[0] . $this->_groupElements[$i] . $separator[1];

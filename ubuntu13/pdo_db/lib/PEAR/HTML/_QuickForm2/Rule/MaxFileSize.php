@@ -54,7 +54,7 @@
  *
  * Note that if file upload failed due to upload_max_filesize php.ini setting
  * or MAX_FILE_SIZE form field, then this rule won't even be called, due to
- * File element's built-in validation setting the error message.
+ * File element's built-in validation.php setting the error message.
  *
  * The Rule considers missing file uploads (UPLOAD_ERR_NO_FILE) valid.
  *  

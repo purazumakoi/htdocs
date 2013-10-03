@@ -52,7 +52,7 @@ class HTML_QuickForm_Rule_Compare extends HTML_QuickForm_Rule
     * 
     * @access private
     * @param  string     operator name
-    * @return string     operator to use for validation
+    * @return string     operator to use for validation.php
     */
     function _findOperator($name)
     {

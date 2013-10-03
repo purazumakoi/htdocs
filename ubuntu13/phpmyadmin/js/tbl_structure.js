@@ -50,7 +50,7 @@ AJAX.registerOnload('tbl_structure.js', function() {
          * is actually an array of DOM elements)
          */
         if (checkTableEditForm($form[0], $form.find('input[name=orig_num_fields]').val())) {
-            // OK, form passed validation step
+            // OK, form passed validation.php step
             PMA_prepareForAjaxRequest($form);
             //User wants to submit the form
             $msg = PMA_ajaxShowMessage();

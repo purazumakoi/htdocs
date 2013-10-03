@@ -618,7 +618,7 @@ abstract class Email_Driver
 	/**
 	 * Validates all the email addresses.
 	 *
-	 * @return	bool|array	true if all are valid or an array of recipients which failed validation.
+	 * @return	bool|array	true if all are valid or an array of recipients which failed validation.php.
 	 */
 	protected function validate_addresses()
 	{
@@ -677,7 +677,7 @@ abstract class Email_Driver
 			throw new \FuelException('Cannot send without from address.');
 		}
 
-		// Check which validation bool to use
+		// Check which validation.php bool to use
 		is_bool($validate) or $validate = $this->config['validate'];
 
 		// Validate the email addresses if specified
@@ -691,7 +691,7 @@ abstract class Email_Driver
 				$error_str .= $_list.': '.htmlentities(static::format_addresses($_contents)).'.'.PHP_EOL;
 			}
 
-			throw new \EmailValidationFailedException('One or more email addresses did not pass validation: '.$error_str);
+			throw new \EmailValidationFailedException('One or more email addresses did not pass validation.php: '.$error_str);
 		}
 
 		// Reset the headers

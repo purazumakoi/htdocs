@@ -17,7 +17,7 @@ namespace Fuel\Core;
 /**
  * Validation error
  *
- * Contains all the information about a validation error
+ * Contains all the information about a validation.php error
  *
  * @package   Fuel
  * @category  Core
@@ -26,11 +26,11 @@ class Validation_Error extends \Exception
 {
 
 	/**
-	 * Load validation Language file when errors are thrown
+	 * Load validation.php Language file when errors are thrown
 	 */
 	public static function _init()
 	{
-		\Lang::load('validation', true);
+		\Lang::load('validation.php', true);
 	}
 
 	/**
@@ -44,7 +44,7 @@ class Validation_Error extends \Exception
 	public $value;
 
 	/**
-	 * @var  string  validation rule string representation
+	 * @var  string  validation.php rule string representation
 	 */
 	public $rule;
 
@@ -81,8 +81,8 @@ class Validation_Error extends \Exception
 	 */
 	public function get_message($msg = false, $open = '', $close = '')
 	{
-		$open   = empty($open)  ? \Config::get('validation.open_single_error', '')  : $open;
-		$close  = empty($close) ? \Config::get('validation.close_single_error', '') : $close;
+		$open   = empty($open)  ? \Config::get('validation.php.open_single_error', '')  : $open;
+		$close  = empty($close) ? \Config::get('validation.php.close_single_error', '') : $close;
 
 		if ($msg === false and ! ($msg = $this->field->get_error_message($this->rule)))
 		{
@@ -92,7 +92,7 @@ class Validation_Error extends \Exception
 			}
 			if ($msg === false)
 			{
-				$msg = \Lang::get('validation.'.$this->rule) ?: \Lang::get('validation.'.\Arr::get(explode(':', $this->rule), 0));
+				$msg = \Lang::get('validation.php.'.$this->rule) ?: \Lang::get('validation.php.'.\Arr::get(explode(':', $this->rule), 0));
 			}
 		}
 		if ($msg == false)
@@ -115,7 +115,7 @@ class Validation_Error extends \Exception
 		// prepare label & value
 		$label    = is_array($this->field->label) ? $this->field->label['label'] : $this->field->label;
 		$value    = is_array($this->value) ? implode(', ', $this->value) : $this->value;
-		if (\Config::get('validation.quote_labels', false) and strpos($label, ' ') !== false)
+		if (\Config::get('validation.php.quote_labels', false) and strpos($label, ' ') !== false)
 		{
 			// put the label in quotes if it contains spaces
 			$label = '"'.$label.'"';

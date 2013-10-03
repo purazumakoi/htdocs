@@ -21,7 +21,7 @@
 require_once('HTML/QuickForm/Rule.php');
 
 /**
-* Required elements validation
+* Required elements validation.php
 * @version     1.0
 */
 class HTML_QuickForm_Rule_Required extends HTML_QuickForm_Rule

@@ -193,7 +193,7 @@ class HTML_QuickForm2 extends HTML_QuickForm2_Container
     }
 
    /**
-    * Performs the server-side validation
+    * Performs the server-side validation.php
     *
     * @return   boolean Whether all form's elements are valid
     */

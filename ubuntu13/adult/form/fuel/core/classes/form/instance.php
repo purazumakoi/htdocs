@@ -672,7 +672,7 @@ class Form_Instance
 	}
 
 	/**
-	 * Add a CSRF token and a validation rule to check it
+	 * Add a CSRF token and a validation.php rule to check it
 	 */
 	public function add_csrf()
 	{

@@ -82,7 +82,7 @@ class HTML_QuickForm_Renderer_ITStatic extends HTML_QuickForm_Renderer
     var $_required = '{label}<font size="1" color="red">*</font>';
 
    /**
-    * How to handle error messages in form validation
+    * How to handle error messages in form validation.php
     * @var string
     */
     var $_error = '<font color="red">{error}</font><br>{html}';
@@ -149,7 +149,7 @@ class HTML_QuickForm_Renderer_ITStatic extends HTML_QuickForm_Renderer
         }
         // assign form attributes
         $this->_tpl->setVariable($this->_formName.'_attributes', $form->getAttributes(true));
-        // assign javascript validation rules
+        // assign javascript validation.php rules
         $this->_tpl->setVariable($this->_formName.'_javascript', $form->getValidationScript());
     } // end func finishForm
 
@@ -351,7 +351,7 @@ class HTML_QuickForm_Renderer_ITStatic extends HTML_QuickForm_Renderer
     } // end func setRequiredTemplate
 
    /**
-    * Sets the way elements with validation errors are rendered
+    * Sets the way elements with validation.php errors are rendered
     *
     * You can use {label} or {html} placeholders to let the renderer know where
     * where the element label or the element html are positionned according to the
@@ -420,7 +420,7 @@ class HTML_QuickForm_Renderer_ITStatic extends HTML_QuickForm_Renderer
     } // end func _renderRequired
 
    /**
-    * Called when an element has a validation error
+    * Called when an element has a validation.php error
     *
     * This method will add the error message to the element label or the element html
     * such as defined with the method setErrorTemplate. If the error placeholder is not found

@@ -56,7 +56,7 @@ return array(
 	'security_iteration' => 300,
 
 	/**
-	 * Time limit for valid $auth response, starting from $auth response generation to validation.
+	 * Time limit for valid $auth response, starting from $auth response generation to validation.php.
 	 */
 	'security_timeout' => '2 minutes',
 

@@ -526,9 +526,9 @@ panes.core = {
 		},
 		"Uri":			"classes/uri.html",
 		"Validation": {
-			"Introduction": "classes/validation/validation.html",
-			"Methods": "classes/validation/methods.html",
-			"Errors": "classes/validation/errors.html"
+			"Introduction": "classes/validation.php/validation.php.html",
+			"Methods": "classes/validation.php/methods.html",
+			"Errors": "classes/validation.php/errors.html"
 		},
 		"View":			"classes/view.html"
 	}

@@ -2287,7 +2287,7 @@ $cfg['AvailableCharsets'] = array(
     'utf-8',
     'utf-7',
     'x-user-defined',
-    'euc-jp',
+    'euc-ja',
     'ks_c_5601-1987',
     'tis-620',
     'SHIFT_JIS'

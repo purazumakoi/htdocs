@@ -28,7 +28,7 @@ function PMA_displayFormTop($action = null, $method = 'post', $hidden_fields = n
     echo '<form method="' . $method . '" action="'
         . htmlspecialchars($action) . '" class="config-form disableAjax">';
     echo '<input type="hidden" name="tab_hash" value="" />';
-    // we do validation on page refresh when browser remembers field values,
+    // we do validation.php on page refresh when browser remembers field values,
     // add a field with known value which will be used for checks
     if (!$has_check_page_refresh) {
         $has_check_page_refresh = true;
@@ -430,7 +430,7 @@ function PMA_displayFormBottom()
 }
 
 /**
- * Appends JS validation code to $js_array
+ * Appends JS validation.php code to $js_array
  *
  * @param string       $field_id   ID of field to validate
  * @param string|array $validators validators callback

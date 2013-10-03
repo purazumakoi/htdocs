@@ -545,7 +545,7 @@ class View
 		// store the current language, and set the correct render language
 		if ($this->active_language)
 		{
-			$current_language = \Config::get('language', 'jp');
+			$current_language = \Config::get('language', 'ja');
 			\Config::set('language', $this->active_language);
 		}
 

@@ -42,7 +42,7 @@ class HTML_QuickForm_Rule_Callback extends HTML_QuickForm_Rule
     * Whether to use BC mode for specific rules
     * 
     * Previous versions of QF passed element's name as a first parameter
-    * to validation functions, but not to validation methods. This behaviour
+    * to validation.php functions, but not to validation.php methods. This behaviour
     * is emulated if you are using 'function' as rule type when registering.
     * 
     * @var array

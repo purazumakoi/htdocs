@@ -45,7 +45,7 @@ class Security
 	 *
 	 * Fetches CSRF settings and current token
 	 *
-	 * @throws SecurityException it the CSRF token validation failed
+	 * @throws SecurityException it the CSRF token validation.php failed
 	 * @throws FuelException if no security output filter is defined
 	 */
 	public static function _init()
@@ -53,13 +53,13 @@ class Security
 		static::$csrf_token_key = \Config::get('security.csrf_token_key', 'fuel_csrf_token');
 		static::$csrf_old_token = \Input::cookie(static::$csrf_token_key, false);
 
-		// if csrf automatic checking is enabled, and it fails validation, bail out!
+		// if csrf automatic checking is enabled, and it fails validation.php, bail out!
 		if (\Config::get('security.csrf_autoload', true))
 		{
 			$check_token_methods = \Config::get('security.csrf_autoload_methods', array('post', 'put', 'delete'));
 			if (in_array(strtolower(\Input::method()), $check_token_methods) and ! static::check_token())
 			{
-				throw new \SecurityException('CSRF validation failed, Possible hacking attempt detected!');
+				throw new \SecurityException('CSRF validation.php failed, Possible hacking attempt detected!');
 			}
 		}
 

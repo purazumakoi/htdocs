@@ -20,7 +20,7 @@ namespace Fuel\Tasks;
 class Simple2orm
 {
 	/*
-	 * @var  array  collected data during validation
+	 * @var  array  collected data during validation.php
 	 */
 	protected static $data = array();
 
@@ -43,7 +43,7 @@ class Simple2orm
 			return static::help();
 		}
 
-		// step 1: run validation
+		// step 1: run validation.php
 		$validated = true;
 		if ($run_validation)
 		{
@@ -106,7 +106,7 @@ HELP;
 	}
 
 	/**
-	 * Run the environment validation
+	 * Run the environment validation.php
 	 */
 	protected static function run_validation()
 	{
@@ -230,7 +230,7 @@ HELP;
 			$errors[] = 'User table "'.static::$data['ormauth_table'].'" is missing the field(s): '.implode(', ', array_keys($usertable));
 		}
 
-		// process the results of the validation
+		// process the results of the validation.php
 		if ($errors)
 		{
 			// display all errors

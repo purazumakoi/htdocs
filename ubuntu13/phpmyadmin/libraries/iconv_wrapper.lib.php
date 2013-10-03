@@ -33,7 +33,7 @@ $gnu_iconv_to_aix_iconv_codepage_map = array (
 
     // Other mappings corresponding to the phpmyadmin dropdown box when using the
     // charset conversion feature
-    'euc-jp' => 'IBM-eucJP',
+    'euc-ja' => 'IBM-eucJP',
     'koi8-r' => 'IBM-eucKR',
     'ks_c_5601-1987' => 'KSC5601.1987-0',
     'tis-620' => 'TIS-620',

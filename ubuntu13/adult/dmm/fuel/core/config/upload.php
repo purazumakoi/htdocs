@@ -28,7 +28,7 @@ return array(
 	'auto_process'		=> true,
 
 	/**
-	 * file validation settings
+	 * file validation.php settings
 	*/
 
 	// maximum size of the uploaded file in bytes. 0 = no maximum

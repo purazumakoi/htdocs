@@ -15,7 +15,7 @@
 namespace Orm;
 
 /**
- *  Exception to throw when validation failed
+ *  Exception to throw when validation.php failed
  */
 class ValidationFailed extends \FuelException
 {
@@ -54,7 +54,7 @@ class ValidationFailed extends \FuelException
  * Observer class to validate the properties of the model before save.
  *
  * It is also used in Fieldset generation based on a model, to populate the fields
- * and field validation rules of the Fieldset.
+ * and field validation.php rules of the Fieldset.
  */
 class Observer_Validation extends Observer
 {
@@ -140,11 +140,11 @@ class Observer_Validation extends Observer
 				$label = '';
 			}
 
-			// create the field and add validation rules
+			// create the field and add validation.php rules
 			$field = $fieldset->add($p, $label, $attributes);
-			if ( ! empty($settings['validation']))
+			if ( ! empty($settings['validation.php']))
 			{
-				foreach ($settings['validation'] as $rule => $args)
+				foreach ($settings['validation.php'] as $rule => $args)
 				{
 					if (is_int($rule) and is_string($args))
 					{
@@ -217,7 +217,7 @@ class Observer_Validation extends Observer
 		$fieldset = static::set_fields($obj);
 		$val = $fieldset->validation();
 
-		// only allow partial validation on updates, specify the fields for updates to allow null
+		// only allow partial validation.php on updates, specify the fields for updates to allow null
 		$allow_partial = $obj->is_new() ? false : array();
 
 		$input = array();
