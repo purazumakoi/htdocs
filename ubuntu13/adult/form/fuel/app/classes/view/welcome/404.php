@@ -26,7 +26,7 @@ class View_Welcome_404 extends ViewModel
 	 */
 	public function view()
 	{
-		$messages = array('Aw, crap!', 'Bloody Hell!', 'Uh Oh!', 'Nope, not here.', 'Huh?');
+		$messages = array('404.phpだよ Aw, crap!', '404.phpだよ Bloody Hell!', '404.phpだよ Uh Oh!', '404.phpだよ Nope, not here.', '404.phpだよ Huh?');
 		$this->title = $messages[array_rand($messages)];
 	}
 }
