@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: purazumakoi
- * Date: 2013/10/06
- * Time: 1:15
- */
 
 return array(
 	'required'      => ':label を入力して下さい。',

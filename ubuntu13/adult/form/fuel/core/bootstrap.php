@@ -274,8 +274,8 @@ function setup_autoloader()
 
 		'Fuel\\Core\\Upload'    => COREPATH.'classes/upload.php',
 
-		'Fuel\\Core\\Validation'        => COREPATH.'classes/validation.php.php',
-		'Fuel\\Core\\Validation_Error'  => COREPATH.'classes/validation.php/error.php',
+		'Fuel\\Core\\Validation'        => COREPATH.'classes/validation.php',
+		'Fuel\\Core\\Validation_Error'  => COREPATH.'classes/validation/error.php',
 
 		'Fuel\\Core\\View'       => COREPATH.'classes/view.php',
 		'Fuel\\Core\\ViewModel'  => COREPATH.'classes/viewmodel.php',

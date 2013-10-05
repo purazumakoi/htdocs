@@ -70,11 +70,11 @@ class Controller_Contact extends \Controller_Template {
 		if (\Input::post())
 		{
 
-			if(0)
+			/*if(0)
 			{//尚ここでトークンチェックをすると STEP2からブラウザのBackボタンで戻って再入力した時も弾かれる。
 				//action_step2のみでトークンチェックするに留め、ここでのチェックは緩めにするのも一考
 				$this->_check_token(); // CSRFトークンチェック、不正POSTを弾く。
-			}
+			}*/
 
 			if (\Input::post('submitstep1'))
 			{// フォームデータにPOSTがあった場合の処理（「確認画面へ進む」ボタン押下時）
@@ -82,12 +82,12 @@ class Controller_Contact extends \Controller_Template {
 
 				if ($val->run())
 				{// バリデーション実行OKならセッションにバリデーション済みのPOSTデータ格納して確認画面STEP2にリダイレクト
-					print_r("aefeああ");
+
 					\Session::set_flash('now_step', 'cnf'); //即消しセッションに現在のステップをセット
 					\Session::set_flash('v_data', \Validation::instance('contact'));//pointA:後述
 					\Response::redirect('contact/cnf');
 				}
-				print_r("aefあああああああeああ");
+
 			}
 		}else{
 			// フォームデータにPOST無しの場合

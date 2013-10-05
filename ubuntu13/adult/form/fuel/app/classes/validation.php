@@ -54,4 +54,3 @@ class Validation extends Fuel\Core\Validation
 		return $ret;
 	}
 }
- 
