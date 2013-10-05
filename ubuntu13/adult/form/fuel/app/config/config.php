@@ -271,7 +271,8 @@ return array(
 		 * );
 		 */
 		'packages'  => array(
-			'twitter',  // これを追加
+			'twitter',
+			'orm',
 		),
 
 		/**

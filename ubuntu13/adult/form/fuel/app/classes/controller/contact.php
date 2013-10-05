@@ -7,8 +7,12 @@
  */
 
 
+// （このコントローラのモデルをContact::で呼び出す為に指定、
+// とりあえずFuelのマニュアルの流儀に沿ってやってみる）
+//use \Model\Contact;
+use \Model\Contact;
 
-class Controller_Contact extends Controller {
+class Controller_Contact extends \Controller_Template {
 
 	/*public function action_category($cat = 'php',$page = '1',$page1 = '1')
 	{
@@ -21,30 +25,18 @@ class Controller_Contact extends Controller {
 		parent::before();
 		// app/config/contact.php を contactとして読み込みConfig::get('contact.配列キー') で値取得が可能になる
 		// see: http://docs.fuelphp.com/general/controllers/base.html
+
 		// 今回はミニミニシステムなのでapp/config/config.php内のautoloadで常にロードするように設定してもいいんだが、コントローラー内に閉じ込めておく。
 		\Config::load('contact', true);
 		// 日本語部分はhttp://docs.fuelphp.com/classes/lang.html を使ってマルチランゲージ対応してみた。
 		\Lang::load('contact'); //Langファイルのロード
 
 		# var_dump(Uri::string());exit;//UriクラスでUri周りの情報は取れる http://docs.fuelphp.com/classes/uri.html
-		if ($this->_count_params())
-		{// URLに不必要なパラメータ付けて来たらわざとリダイレクトする
-			\Response::redirect('contact/entry');
-		}
-	}
-	public function action_mongo()
-	{
 
-		$mongodb = \Mongo_Db::instance();
-		// 挿入
-		//$results = $mongodb->insert('posts', array('name' => '名前', 'contents' => 'コンテンツ'));
-		// データ取得
-		$results = $mongodb->get('posts');
-//		var_dump($results);
-		print_r($results);
-
-		return $results;
-
+//		if ($this->_count_params())
+//		{// URLに不必要なパラメータ付けて来たらわざとリダイレクトする
+//			\Response::redirect('contact/entry');
+//		}
 	}
 
 	/**
@@ -74,27 +66,32 @@ class Controller_Contact extends Controller {
 		$v_data=null;
 		// バリデーションルールのセット（ここではモデル内(app/classes/model/contact.php）にルールを記述している）
 		$val = Contact::validate('contact');
+
 		if (\Input::post())
 		{
+
 			if(0)
 			{//尚ここでトークンチェックをすると STEP2からブラウザのBackボタンで戻って再入力した時も弾かれる。
 				//action_step2のみでトークンチェックするに留め、ここでのチェックは緩めにするのも一考
 				$this->_check_token(); // CSRFトークンチェック、不正POSTを弾く。
 			}
 
-			if (\Input::post('submitentry'))
+			if (\Input::post('submitstep1'))
 			{// フォームデータにPOSTがあった場合の処理（「確認画面へ進む」ボタン押下時）
 				// バリデーション実行
+
 				if ($val->run())
 				{// バリデーション実行OKならセッションにバリデーション済みのPOSTデータ格納して確認画面STEP2にリダイレクト
-					\Session::set_flash('now_step', 'step2'); //即消しセッションに現在のステップをセット
+					print_r("aefeああ");
+					\Session::set_flash('now_step', 'cnf'); //即消しセッションに現在のステップをセット
 					\Session::set_flash('v_data', \Validation::instance('contact'));//pointA:後述
-					\Response::redirect('contact/step2');
+					\Response::redirect('contact/cnf');
 				}
+				print_r("aefあああああああeああ");
 			}
 		}else{
 			// フォームデータにPOST無しの場合
-			if ('backtoentry' === \Session::get_flash('now_step'))
+			if ('backtostep1' === \Session::get_flash('now_step'))
 			{
 				//STEP2「入力画面に戻る」ボタン押下経由でリダイレクトされて来た時の処理
 				//pointCで保持し続けたデータをここで展開
@@ -102,10 +99,11 @@ class Controller_Contact extends Controller {
 			}
 		}
 		$this->template->title = 'Contact &raquo; entry';//titleのセット(template.phpで展開される）
+
 		//外枠ビューtemplate.phpの$contentに内側ビューcontact/entry.phpと内側ビューで展開する変数$valをセット
 		//バリデーション済データをview側で$valで呼べるようにセットする
 		//ここでは自動Htmlエンコードは行わない(第三引数false）see http://docs.fuelphp.com/classes/view.html
-		$this->template->content = \View::forge('entry')
+		$this->template->content = \View::forge('contact/entry')
 			-> set('val', is_null($v_data)? \Validation::instance('contact'):$v_data, false);
 	}
 
@@ -299,7 +297,9 @@ class Controller_Contact extends Controller {
 	 */
 	private function _count_params()
 	{
-		return count($this->request->method_params);
+		//$count = count($this->request->method_params);
+		$count = count(Input::get());
+		return $count;
 	}
 
 }

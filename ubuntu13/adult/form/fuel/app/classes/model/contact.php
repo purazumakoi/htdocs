@@ -11,7 +11,8 @@
  * @copyright 2011 mataga
  * @link http://twitter.com/mataga
  */
-namespace Contact\Model;
+
+namespace Model;
 //namespace Model;//see http://docs.fuelphp.com/general/models.html
 
 class Contact extends \Orm\Model {//see http://docs.fuelphp.com/packages/orm/intro.html
@@ -40,6 +41,7 @@ class Contact extends \Orm\Model {//see http://docs.fuelphp.com/packages/orm/int
 	//see http://docs.fuelphp.com/classes/validation.php/validation.php.html
 	public static function validate($fieldset)
 	{
+
 		$val = \Validation::forge($fieldset);
 		$val->add('name1', __('label.name1'))
 			->add_rule('required')

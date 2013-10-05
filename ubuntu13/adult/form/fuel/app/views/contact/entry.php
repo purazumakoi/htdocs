@@ -34,7 +34,7 @@
 	<?php echo Html::ul(__('info_msg.msg_arr')); ?>
 </div>
 <div id="formarea">
-	<?php echo Form::open('contact/step1'); ?>
+	<?php echo Form::open('contact/entry'); ?>
 	<?php
 	//CSRFのトークンをセット see http://docs.fuelphp.com/classes/security.html
 	echo \Form::hidden(\Config::get('security.csrf_token_key'), \Security::fetch_token());
