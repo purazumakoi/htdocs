@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'required'      => ':label を入力して下さい。',
+	/*'required'      => ':label を入力して下さい。',
 	'min_length'    => ':label は、少なくとも :param:1 文字以上入力して下さい。',
 	'max_length'    => ':label は、:param:1 文字以下で入力して下さい。',
 	'exact_length'  => ':label は、:param:1 文字で入力して下さい。',
@@ -14,5 +14,5 @@ return array(
 	'valid_ip'      => ':label は、有効なIPアドレスではありません。',
 	'numeric_min'   => ':label には、:param:1 より大きい数値を入力して下さい。',
 	'numeric_max'   => ':label には、:param:1 より小さい数値を入力して下さい。',
-	'valid_string'  => ':label は、有効な文字列ではありません。:rule で入力して下さい。',
+	'valid_string'  => ':label は、有効な文字列ではありません。:rule で入力して下さい。',*/
 );

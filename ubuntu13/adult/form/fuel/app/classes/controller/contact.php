@@ -22,6 +22,8 @@ class Controller_Contact extends \Controller_Template {
 
 	public function before()
 	{
+
+
 		parent::before();
 		// app/config/contact.php を contactとして読み込みConfig::get('contact.配列キー') で値取得が可能になる
 		// see: http://docs.fuelphp.com/general/controllers/base.html
@@ -37,6 +39,7 @@ class Controller_Contact extends \Controller_Template {
 //		{// URLに不必要なパラメータ付けて来たらわざとリダイレクトする
 //			\Response::redirect('contact/entry');
 //		}
+
 	}
 
 	/**
@@ -67,6 +70,7 @@ class Controller_Contact extends \Controller_Template {
 		// バリデーションルールのセット（ここではモデル内(app/classes/model/contact.php）にルールを記述している）
 		$val = Contact::validate('contact');
 
+
 		if (\Input::post())
 		{
 
@@ -82,9 +86,15 @@ class Controller_Contact extends \Controller_Template {
 
 				if ($val->run())
 				{// バリデーション実行OKならセッションにバリデーション済みのPOSTデータ格納して確認画面STEP2にリダイレクト
-
 					\Session::set_flash('now_step', 'cnf'); //即消しセッションに現在のステップをセット
 					\Session::set_flash('v_data', \Validation::instance('contact'));//pointA:後述
+					//\Session::keep_flash('now_step');
+					//\Session::keep_flash('v_data');
+
+					\Session::set('hoge','hoge');
+
+
+
 					\Response::redirect('contact/cnf');
 				}
 
@@ -115,9 +125,15 @@ class Controller_Contact extends \Controller_Template {
 	 */
 	public function action_cnf()
 	{
+		print_r(\Session::get_flash());
+		print_r(\Session::get_flash('now_step'));
+		print_r(\Session::get_flash('v_data'));exit;
+
 		if (\Input::post())
 		{
+
 			$this->_check_token();
+
 			if (\Input::post('backtoentry'))
 			{// 「入力画面に戻る」ボタン押下時
 				\Session::set_flash('now_step', 'backtoentry'); //即消しセッションに現在のステップをセット
@@ -149,9 +165,11 @@ class Controller_Contact extends \Controller_Template {
 				\Response::redirect('contact/entry');//想定外のPOSTはentryに差し戻す
 			}
 		}else{
-			$this->_check_step('cnf'); //URL直呼び防止。entryの画面からSTEP2の画面にリダイレクトされてきた場合「以外」はentryに戻す。
+
+			//$this->_check_step('cnf'); //URL直呼び防止。entryの画面からSTEP2の画面にリダイレクトされてきた場合「以外」はentryに戻す。
 			//POST無しでentryからリダイレクトされてきた時セッションにセットしたv_dataを画面表示用に取り出す
 			$v_data = \Session::get_flash('v_data');
+		print_r($v_data);exit;
 			if(is_null($v_data))
 			{
 				\Response::redirect('contact/entry');

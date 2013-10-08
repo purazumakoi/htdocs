@@ -62,7 +62,7 @@ return array(
 	 */
 	// 'ob_callback'  => null,
 
-	// 'errors'  => array(
+	'errors'  => array(
 		// Which errors should we show, but continue execution? You can add the following:
 		// E_NOTICE, E_WARNING, E_DEPRECATED, E_STRICT to mimic PHP's default behaviour
 		// (which is to continue on non-fatal errors). We consider this bad practice.
@@ -70,16 +70,16 @@ return array(
 		// How many errors should we show before we stop showing them? (prevents out-of-memory errors)
 		// 'throttle'     => 10,
 		// Should notices from Error::notice() be shown?
-		// 'notices'      => true,
+		'notices'      => false,
 		// Render previous contents or show it as HTML?
 		// 'render_prior' => false,
-	// ),
+	),
 
 	/**
 	 * Localization & internationalization settings
 	 */
 	'language'           => 'ja', // Default language
-	'language_fallback'  => 'ja', // Fallback language when file isn't available for default language
+	'language_fallback'  => 'en', // Fallback language when file isn't available for default language
 	'locale'             => 'ja_JP.utf8', // PHP set_locale() setting, null to not set
 
 	/**
@@ -93,7 +93,7 @@ return array(
 	 * server_gmt_offset	in seconds the server offset from gmt timestamp when time() is used
 	 * default_timezone		optional, if you want to change the server's default timezone
 	 */
-	// 'server_gmt_offset'  => 0,
+	'server_gmt_offset'  => 0,
 	'default_timezone'   => 'Asia/Tokyo',    // タイムゾーンを設定
 
 	/**

@@ -66,6 +66,10 @@ class Contact extends \Orm\Model {//see http://docs.fuelphp.com/packages/orm/int
 			->add_rule('required')
 			->add_rule('max_length', 8192);
 		//->add_rule('valid_string', array('all',''));
+
+		$val->set_message('required', ':label は必ず入力してください。');
+
+
 		return $val;
 	}
 }
