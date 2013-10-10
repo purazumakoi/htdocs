@@ -22,8 +22,6 @@ class Controller_Contact extends \Controller_Template {
 
 	public function before()
 	{
-
-
 		parent::before();
 		// app/config/contact.php を contactとして読み込みConfig::get('contact.配列キー') で値取得が可能になる
 		// see: http://docs.fuelphp.com/general/controllers/base.html
@@ -88,12 +86,7 @@ class Controller_Contact extends \Controller_Template {
 				{// バリデーション実行OKならセッションにバリデーション済みのPOSTデータ格納して確認画面STEP2にリダイレクト
 					\Session::set_flash('now_step', 'cnf'); //即消しセッションに現在のステップをセット
 					\Session::set_flash('v_data', \Validation::instance('contact'));//pointA:後述
-					//\Session::keep_flash('now_step');
-					//\Session::keep_flash('v_data');
-
 					\Session::set('hoge','hoge');
-
-
 
 					\Response::redirect('contact/cnf');
 				}
@@ -101,7 +94,7 @@ class Controller_Contact extends \Controller_Template {
 			}
 		}else{
 			// フォームデータにPOST無しの場合
-			if ('backtostep1' === \Session::get_flash('now_step'))
+			if ('backtoentry' === \Session::get_flash('now_step'))
 			{
 				//STEP2「入力画面に戻る」ボタン押下経由でリダイレクトされて来た時の処理
 				//pointCで保持し続けたデータをここで展開
@@ -125,14 +118,14 @@ class Controller_Contact extends \Controller_Template {
 	 */
 	public function action_cnf()
 	{
-		print_r(\Session::get_flash());
-		print_r(\Session::get_flash('now_step'));
-		print_r(\Session::get_flash('v_data'));exit;
+		//print_r(\Session::get_flash('v_data'));
+		//print_r(\Session::get('hoge'));exit;
+
 
 		if (\Input::post())
 		{
 
-			$this->_check_token();
+			//$this->_check_token();
 
 			if (\Input::post('backtoentry'))
 			{// 「入力画面に戻る」ボタン押下時
@@ -169,14 +162,13 @@ class Controller_Contact extends \Controller_Template {
 			//$this->_check_step('cnf'); //URL直呼び防止。entryの画面からSTEP2の画面にリダイレクトされてきた場合「以外」はentryに戻す。
 			//POST無しでentryからリダイレクトされてきた時セッションにセットしたv_dataを画面表示用に取り出す
 			$v_data = \Session::get_flash('v_data');
-		print_r($v_data);exit;
 			if(is_null($v_data))
 			{
 				\Response::redirect('contact/entry');
 			}
 			\Session::set_flash('v_data',$v_data);//pointB:次の画面に渡す用に再度set_flashしておく
 			$this->template->title = 'Contact &raquo; Step2';
-			$this->template->content = \View::forge('cnf')->set('val', $v_data, false);
+			$this->template->content = \View::forge('contact/cnf')->set('val', $v_data, false);
 		}
 	}
 
@@ -202,7 +194,7 @@ class Controller_Contact extends \Controller_Template {
 		 * ／
 		 */
 		$this->template->title = 'Contact &raquo; Step3';
-		$this->template->content = \View::forge('act');
+		$this->template->content = \View::forge('contact/act');
 	}
 
 	/**
@@ -216,7 +208,7 @@ class Controller_Contact extends \Controller_Template {
 		$this->_check_step('entryng'); //URL直呼び防止
 		\Session::destroy(); //NG画面でも明示的にセッションのゴミは消しとく
 		$this->template->title = 'Contact &raquo; entryng';
-		$this->template->content = \View::forge('entryng');
+		$this->template->content = \View::forge('contact/entryng');
 	}
 
 	/**
@@ -229,7 +221,7 @@ class Controller_Contact extends \Controller_Template {
 	{
 
 		$this->template->title = 'Contact &raquo; entryng';
-		$this->template->content = \View::forge('step404');
+		$this->template->content = \View::forge('contact/step404');
 
 	}
 	/**
@@ -243,7 +235,7 @@ class Controller_Contact extends \Controller_Template {
 
 		$this->template->title = 'Contact &raquo;';
 		$this->template->content_cssid = 'container_l';
-		$this->template->content = \View::forge('srcwindow');
+		$this->template->content = \View::forge('contact/srcwindow');
 	}
 
 	/**
@@ -272,7 +264,7 @@ class Controller_Contact extends \Controller_Template {
 			)
 		);
 
-		$this->template->content = \View::forge('srcdbg')->set('hoge',$hoge,false);
+		$this->template->content = \View::forge('contact/srcdbg')->set('hoge',$hoge,false);
 	}
 
 	/**

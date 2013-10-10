@@ -26,4 +26,6 @@
 <div class="c_send3" align="center">
 	<p class="c_m1"><?php echo __('info_msg.submit_ok'); ?></p>
 	<p><?php echo __('info_msg.submit_ok_attention'); ?></p>
+	
+	<p><a href="./entry">entryへ</a></p>
 </div>

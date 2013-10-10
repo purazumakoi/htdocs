@@ -30,8 +30,10 @@
 	<?php echo Html::ul(__('info_msg.msg_arr')); ?>
 </div>
 <div id="formarea">
-	<?php echo Form::open('contact/step2'); ?>
+	<?php echo Form::open('contact/cnf'); ?>
+
 	<?php echo \Form::hidden(\Config::get('security.csrf_token_key'), \Security::fetch_token());?>
+
 	<table class="c_tbl" cellspacing="1"  border="0" >
 		<tbody>
 		<tr>
@@ -39,7 +41,7 @@
 				<!-- name -->
 				<?php echo __('label.name1'); ?>
 			</td>
-			<td class="c_tdr"class="c_tdr">
+			<td class="c_tdr">
 				<?php echo e($val->input('name1')); ?>
 			</td>
 		</tr>
@@ -86,8 +88,11 @@
 	</div>
 	<!-- Submit Button -->
 	<div class="c_send2">
-		<?php echo Form::submit('backtostep1', __('btn.backtostep1'), array('class'=>'c_btn')); ?>
+
+		<?php echo Form::submit('backtoentry', __('btn.backtostep1'), array('class'=>'c_btn')); ?>
+
 		<?php echo Form::submit('submitstep2', __('btn.submitstep2'), array('class'=>'c_btn')); ?>
 	</div>
+
 	<?php echo Form::close(); ?>
 </div>

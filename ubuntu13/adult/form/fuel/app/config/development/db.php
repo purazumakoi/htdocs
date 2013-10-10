@@ -8,7 +8,7 @@ return array(
 		'type'        => 'pdo',
 		'connection'  => array(
 			'dsn'        => 'mysql:host=localhost;dbname=fuel_dev',
-			'username'   => 'purazumakoi',
+			'username'   => 'root',
 			'password'   => 'otokogackt',
 		),
 		'identifier'   => '`',
