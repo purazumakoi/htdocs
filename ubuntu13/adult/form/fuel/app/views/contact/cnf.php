@@ -32,7 +32,6 @@
 <div id="formarea">
 	<?php echo Form::open('contact/cnf'); ?>
 
-	<?php echo \Form::hidden(\Config::get('security.csrf_token_key'), \Security::fetch_token());?>
 
 	<table class="c_tbl" cellspacing="1"  border="0" >
 		<tbody>
@@ -86,6 +85,9 @@
 	<div class="c_send1" align="center">
 		<span class="attention"><?php echo __('info_msg.submit_attention'); ?></span>
 	</div>
+
+	<?php echo \Form::hidden(\Config::get('security.csrf_token_key'), \Security::fetch_token());?>
+
 	<!-- Submit Button -->
 	<div class="c_send2">
 

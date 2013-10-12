@@ -125,7 +125,8 @@ class Controller_Contact extends \Controller_Template {
 		if (\Input::post())
 		{
 
-			//$this->_check_token();
+			$this->_check_token();
+//print "raaa ";exit;
 
 			if (\Input::post('backtoentry'))
 			{// 「入力画面に戻る」ボタン押下時
@@ -198,6 +199,33 @@ class Controller_Contact extends \Controller_Template {
 	}
 
 	/**
+	 * list
+	 *
+	 * @access public
+	 * @return void
+	 */
+	public function action_list()
+	{
+
+		echo DB::last_query();
+
+		$contact_ary = DB::select()
+					->from('contacts')
+					->order_by('id')
+					->execute()
+					->as_array();
+
+
+		return Response::forge(
+			ViewModel::forge('contact/list')->set('data', array(
+				'contact_ary' => $contact_ary,
+
+				)
+			)
+		);
+
+	}
+	/**
 	 * entryng：NGリダイレクト画面
 	 *
 	 * @access public
@@ -230,13 +258,13 @@ class Controller_Contact extends \Controller_Template {
 	 * @access public
 	 * @return void
 	 */
-	public function action_srcwindow()
-	{
-
-		$this->template->title = 'Contact &raquo;';
-		$this->template->content_cssid = 'container_l';
-		$this->template->content = \View::forge('contact/srcwindow');
-	}
+//	public function action_srcwindow()
+//	{
+//
+//		$this->template->title = 'Contact &raquo;';
+//		$this->template->content_cssid = 'container_l';
+//		$this->template->content = \View::forge('contact/srcwindow');
+//	}
 
 	/**
 	 * SRCDBG：Debugクラスの拡張実験

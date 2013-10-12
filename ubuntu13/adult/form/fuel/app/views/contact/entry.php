@@ -28,6 +28,8 @@
 <?php echo Asset::img(__('img_contact.filename'),array('alt'=>__('img_contact.alt'),'id'=>'img_contact')); ?>
 <p style="clear:both;" />
 
+<?php echo $name; ?>
+
 <!-- Notice-Messages -->
 <div id="infoarea">
 	<b><?php echo __('info_msg.head'); ?></b>
