@@ -10,11 +10,13 @@
           <root url="phar://$MODULE_DIR$/adult/twit/composer.phar" />
           <root url="phar://$MODULE_DIR$/adult/dmm/composer.phar" />
           <root url="phar://$MODULE_DIR$/adult/form/composer.phar" />
+          <root url="phar://$MODULE_DIR$/adult/xvideo/composer.phar" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/adult/twit/composer.phar" />
           <root url="phar://$MODULE_DIR$/adult/dmm/composer.phar" />
           <root url="phar://$MODULE_DIR$/adult/form/composer.phar" />
+          <root url="phar://$MODULE_DIR$/adult/xvideo/composer.phar" />
         </SOURCES>
       </library>
     </orderEntry>
