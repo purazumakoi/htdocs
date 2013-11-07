@@ -11,12 +11,14 @@
           <root url="phar://$MODULE_DIR$/ubuntu13/adult/twit/composer.phar" />
           <root url="phar://$MODULE_DIR$/ubuntu13/adult/form/composer.phar" />
           <root url="phar://$MODULE_DIR$/ubuntu13/adult/dmm/composer.phar" />
+          <root url="phar://$MODULE_DIR$/faq/composer.phar" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/ubuntu13/adult/xvideo/composer.phar" />
           <root url="phar://$MODULE_DIR$/ubuntu13/adult/twit/composer.phar" />
           <root url="phar://$MODULE_DIR$/ubuntu13/adult/form/composer.phar" />
           <root url="phar://$MODULE_DIR$/ubuntu13/adult/dmm/composer.phar" />
+          <root url="phar://$MODULE_DIR$/faq/composer.phar" />
         </SOURCES>
       </library>
     </orderEntry>
