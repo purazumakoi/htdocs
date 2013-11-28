@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Angularの練習</title>
+    <script src="../angular-1.0.1.min.js"></script>
+    <script src="myscript.js"></script>
+    <style>
+        .even {
+            background:#ccc;
+        }
+        .odd {
+            background:red;
+        }
+    </style>
+</head>
+<body>
+<h1>AngularJSの練習</h1>
+<div ng-controller="mainCtrl">
+    <ul>
+        <li ng-repeat="user in users" ng-controller="userItemCtrl">
+            {{user.name}} {{user.score}}
+            <button ng-click="increment()">+1</button>
+        </li>
+    </ul>
+</div>
+</body>
+</body>
+</html>
+

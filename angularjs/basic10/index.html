@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Angularの練習　エラーメッセージ</title>
+    <script src="../angular-1.0.1.min.js"></script>
+    <script src="myscript.js"></script>
+</head>
+
+<body>
+<h1>AngularJSの練習</h1>
+<div ng-controller="mainCtrl">
+    <form novalidate name="myForm" ng-submit="addUser()">
+
+        <p>Color:
+            <select ng-model="user.color" ng-options="'label:'+color for color in ['red','blue','pink']" ng-init="user.color='red'"></select>
+        </p>
+        <input type="submit" value="add"></p>
+    </form>
+    <pre>{{user|json}}</pre>
+</div>
+</body>
+
+</html>
+

@@ -9,7 +9,7 @@ return array(
 		'connection'  => array(
 			'dsn'        => 'mysql:host=localhost;dbname=fuel_dev',
 			'username'   => 'root',
-			'password'   => 'otokogackt',
+			'password'   => 'root',
 		),
 		'identifier'   => '`',
 		//'table_prefix' => 'sw_',
@@ -19,12 +19,12 @@ return array(
 	),
 	'mongo' => array(
 		// このグループは、インスタンス名が省略された場合に使用されます。
-		'default' => array(
-			'hostname'   => 'localhost',
-			'database'   => 'mongo_fuel',
-			'username'   => 'purazumakoi',
-			'password'   => 'otokogackt',
-		),
+//		'default' => array(
+//			'hostname'   => 'localhost',
+//			'database'   => 'mongo_fuel',
+//			'username'   => 'purazumakoi',
+//			'password'   => 'aaaaa',
+//		),
 	),
 	/*'default' => array(
 		'connection'  => array(
